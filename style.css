@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +10,22 @@
 
 body {
   font-size: 25px;
+  background-color: #000;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-size: 65%;
+  text-align: center;
+}
+
+/* a {
+  font-weight: bold;
+} */
+
+.hide-class {
+  display: none;
 }
 
 /* -------------------------------------------- */
@@ -16,37 +36,40 @@ body {
   margin: 0 auto; /*Centers the content*/
 }
 
-.hide-class {
-  display: none;
+.col {
+  width: 100%;
 }
 
 .container-1 {
   /* display: flex; */
-  border: 1px solid red;
-  padding: 10px 5%;
+  padding: 20px 3%;
   display: inline-block;
   width: 100%;
+  background-color: #f1f2ed;
 }
 
 .logo {
-  width: 40%;
+  width: 150px;
   float: left;
 }
 
+/* -------------------------------------------- */
+/* HAMBURGER ICON */
+/* -------------------------------------------- */
 .ham {
   height: 4px;
-  width: 55%;
+  width: 35px;
   background-color: #fff;
   border-radius: 5px;
   display: block;
-  margin: 30% auto; /* Centers the 3 lines */
+  margin: 17px auto; /* Centers the 3 lines */
 }
 
 .ham::before {
   content: "";
   position: absolute;
-  top: 20px;
-  width: 9%;
+  top: 28px;
+  width: 35px;
   height: inherit;
   background-color: inherit;
   border-radius: inherit;
@@ -55,27 +78,184 @@ body {
 .ham::after {
   content: "";
   position: absolute;
-  top: 38px;
-  width: 9%;
+  top: 46px;
+  width: 35px;
   height: inherit;
   background-color: inherit;
   border-radius: inherit;
 }
 
 .ham-border {
-  width: 18%;
+  width: 45px;
   height: 40px;
   float: right;
   border-radius: 5px;
   background-color: #66b245;
 }
 
+/* -------------------------------------------- */
+/* END HAMBURGER ICON */
+/* -------------------------------------------- */
+
 .order-link {
   background-color: #66b245;
   color: #fff;
   font-size: 50%;
   float: right;
-  margin-right: 2%;
+  margin-right: 5px;
   padding: 13px 3%;
   border-radius: 5px;
+  text-decoration: none;
+}
+
+.header-pic {
+  width: 100%;
+  height: 50%;
+}
+
+/* -------------------------------------------- */
+/* 'Our Story' SECTION */
+/* -------------------------------------------- */
+.section--story {
+  padding: 20px 15px 50px 15px;
+}
+
+.heading {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 150%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.story-p1,
+.story-p2,
+.story-p3 {
+  /* border: 1px solid red; */
+  margin-bottom: 25px;
+}
+
+.home-cart {
+  /* border: 1px solid red; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* -------------------------------------------- */
+/* END 'Our Story' SECTION */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* 'ShackBurger Kits' SECTION */
+/* -------------------------------------------- */
+.shackburger-kit {
+  padding: 20px 15px 50px 15px;
+}
+
+.shackburger-img-1 {
+  width: 100%;
+}
+
+.shackburger-img-2 {
+  display: block;
+  margin: 25px auto;
+}
+
+.section--kit p {
+  margin-bottom: 20px;
+}
+
+.section--kit p a {
+  color: #fff;
+}
+
+/* Kit Includes: */
+.section--kit strong {
+  /* border: 1px solid red; */
+  /* font-weight: bold; */
+  font-size: 60%;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #66b245;
+  margin-bottom: 20px;
+}
+
+.kit-details p {
+  margin: 0px;
+}
+
+.kit-details {
+  margin-bottom: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #66b245;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 60px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  display: block;
+  /* margin: 40px auto 0 auto; */
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* .link-div {
+  text-align: center;
+} */
+/* -------------------------------------------- */
+/* END 'ShackBurger Kits' SECTION */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* 'Order' SECTION */
+/* -------------------------------------------- */
+.section--order {
+  /* padding: 20px 15px 50px 15px; */
+  background-color: cyan;
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: left;
+  z-index: 1;
+}
+
+.pick-up {
+  background-color: #66b245;
+  padding: 0;
+}
+
+.pick-up-padding {
+  padding: 40px 15px 50px 15px;
+}
+
+.pick-up::before {
+  /* outline: 1px solid red; */
+  content: "";
+  display: block;
+  width: 100%;
+  height: 75%;
+  background-image: url("/Images/food-and-drink-fries.png");
+  background-repeat: no-repeat;
+  background-size: 230px;
+  background-position: bottom 80px left -70px;
+  position: absolute;
+  left: 0px;
+  opacity: 0.3;
+}
+
+.fries-pic {
+  width: 70px;
+  display: block;
+  margin: 0 auto 30px auto;
+}
+
+.pick-up p {
+  margin-bottom: 35px;
+}
+
+.pick-up p strong {
+  display: block;
 }
