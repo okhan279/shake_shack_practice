@@ -18,6 +18,7 @@ body {
 p {
   font-size: 65%;
   text-align: center;
+  margin-bottom: 25px;
 }
 
 /* a {
@@ -39,7 +40,39 @@ p {
 .col {
   width: 100%;
 }
+/* Anchor elements found at the end of some sections */
+.link {
+  text-decoration: none;
+  color: #66b245;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 60px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  display: block;
+  /* margin: 40px auto 0 auto; */
+  text-align: center;
+  margin-top: 40px;
+  z-index: 10;
+}
 
+.heading {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 150%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* The green hamburger icon found on top, and in the middle, of some sections */
+.green-hamburger {
+  display: block;
+  margin: 25px auto;
+}
+
+/* -------------------------------------------- */
+/* HEADER */
+/* -------------------------------------------- */
 .container-1 {
   /* display: flex; */
   padding: 20px 3%;
@@ -56,6 +89,7 @@ p {
 /* -------------------------------------------- */
 /* HAMBURGER ICON */
 /* -------------------------------------------- */
+/* Middle line in the ham icon */
 .ham {
   height: 4px;
   width: 35px;
@@ -92,7 +126,6 @@ p {
   border-radius: 5px;
   background-color: #66b245;
 }
-
 /* -------------------------------------------- */
 /* END HAMBURGER ICON */
 /* -------------------------------------------- */
@@ -118,13 +151,6 @@ p {
 /* -------------------------------------------- */
 .section--story {
   padding: 20px 15px 50px 15px;
-}
-
-.heading {
-  font-family: "Dancing Script", sans-serif;
-  font-size: 150%;
-  text-align: center;
-  margin-bottom: 25px;
 }
 
 .story-p1,
@@ -155,13 +181,8 @@ p {
   width: 100%;
 }
 
-.shackburger-img-2 {
-  display: block;
-  margin: 25px auto;
-}
-
 .section--kit p {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .section--kit p a {
@@ -202,10 +223,6 @@ p {
   text-align: center;
   margin-top: 40px;
 }
-
-/* .link-div {
-  text-align: center;
-} */
 /* -------------------------------------------- */
 /* END 'ShackBurger Kits' SECTION */
 /* -------------------------------------------- */
@@ -213,21 +230,14 @@ p {
 /* -------------------------------------------- */
 /* 'Order' SECTION */
 /* -------------------------------------------- */
-.section--order {
-  /* padding: 20px 15px 50px 15px; */
-  background-color: cyan;
-  background-repeat: no-repeat;
-  background-size: 300px;
-  background-position: left;
-  z-index: 1;
-}
-
+/* Part 1 of this section: Pick up */
 .pick-up {
   background-color: #66b245;
-  padding: 0;
+  /* padding: 0; */
 }
 
-.pick-up-padding {
+.pick-up-padding,
+.delivered-padding {
   padding: 40px 15px 50px 15px;
 }
 
@@ -259,3 +269,84 @@ p {
 .pick-up p strong {
   display: block;
 }
+
+/* Part 2 of this section: Delivered */
+.hang-at-home {
+  margin-bottom: 25px;
+}
+
+/* Shop locations */
+.delivered > div > div > p {
+  margin: 0;
+}
+
+.delivered::before {
+  /* outline: 1px solid red; */
+  content: "";
+  display: block;
+  width: 100%;
+  height: 90%;
+  background-image: url("/Images/food-and-drink-burger.png");
+  background-repeat: no-repeat;
+  background-size: 450px;
+  background-position: bottom 40px left -200px;
+  position: absolute;
+  left: 0px;
+  opacity: 0.1;
+}
+/* -------------------------------------------- */
+/* END 'Order' SECTION */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* 'Ethics' SECTION */
+/* -------------------------------------------- */
+.ethics-pic {
+  width: 100%;
+}
+
+.ethics-padding {
+  padding: 40px 15px 50px 15px;
+}
+
+.section--ethics p {
+  margin-bottom: 30px;
+}
+
+.happy-workers-pic {
+  width: 100%;
+}
+/* -------------------------------------------- */
+/* END 'Ethics' SECTION */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* 'Vacancies' SECTION */
+/* -------------------------------------------- */
+.vacancies-padding {
+  padding: 40px 15px 50px 15px;
+}
+
+.vacancies-psuedo::before {
+  /* outline: 1px solid white; */
+  content: "";
+  display: block;
+  width: 100%;
+  height: 55%;
+  background-image: url("/Images/home-envelope.png");
+  background-repeat: no-repeat;
+  background-size: 450px;
+  background-position: bottom 15px right 200px;
+  transform: scaleX(-1);
+  filter: FlipH;
+  position: absolute;
+  left: 0px;
+  opacity: 0.2;
+}
+/* -------------------------------------------- */
+/* END 'Vacancies' SECTION */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* 'Contact-us' SECTION */
+/* -------------------------------------------- */
