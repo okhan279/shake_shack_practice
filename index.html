@@ -76,7 +76,7 @@
         />
         <div class="shackburger-kit">
           <img
-            class="green-hamburger"
+            class="section-icon"
             src="/Images/food-and-drink-burger.png"
             alt="Hamburger picture"
           />
@@ -113,7 +113,7 @@
         <div class="pick-up">
           <div class="pick-up-padding">
             <img
-              class="fries-pic"
+              class="section-icon fries-pic"
               src="/Images/food-and-drink-fries.png"
               alt="Shake Shack Fries"
             />
@@ -147,7 +147,7 @@
         <div class="delivered">
           <div class="delivered-padding">
             <img
-              class="green-hamburger"
+              class="section-icon"
               src="/Images/food-and-drink-burger.png"
               alt="Shake Shack Burger"
             />
@@ -222,7 +222,7 @@
         />
         <div class="vacancies-padding vacancies-psuedo">
           <img
-            class="green-hamburger"
+            class="section-icon"
             src="/Images/food-and-drink-burger.png"
             alt="Shake Shack Burger"
           />
@@ -242,21 +242,54 @@
           src="/Images/lets-talk-495x330.jpg"
           alt="Lets Talk Pic"
         />
-        <img
-          class="home-envelop-pic"
-          src="/Images/home-envelope.png"
-          alt="Envelop"
-        />
-        <h3 class="heading">Let's Talk</h3>
-        <p>Our team eagerly awaits your feedback!</p>
-        <p>Questions, comments? Drop us a note and we will get back to you.</p>
+        <div class="contact-us-padding">
+          <img
+            class="section-icon"
+            src="/Images/home-envelope.png"
+            alt="Envelop"
+          />
+          <h3 class="heading">Let's Talk</h3>
+          <p>Our team eagerly awaits your feedback!</p>
+          <p>
+            Questions, comments? Drop us a note and we will get back to you.
+          </p>
+          <p>
+            Your observations are invaluable – thank you for taking the time to
+            share with us.
+          </p>
+
+          <a class="link" href="#">Contact Us</a>
+
+          <div class="social-media">
+            <ion-icon class="facebook" name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-twitter"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+          </div>
+        </div>
+      </section>
+
+      <section class="section--mailing-list">
+        <h6 class="heading">Join our Mailing List</h6>
         <p>
-          Your observations are invaluable – thank you for taking the time to
-          share with us.
+          Need more Shack in your life? Join our mailing list and we’ll keep you
+          in the loop on all the latest and greatest Shack happenings.
         </p>
 
-        <a class="link" href="#">Contact Us</a>
+        <form>
+          <div>
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first-name" />
+
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last-name" />
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" />
+          </div>
+        </form>
       </section>
     </main>
+    <!-- Ion icons -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   </body>
 </html>

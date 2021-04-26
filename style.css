@@ -65,7 +65,7 @@ p {
 }
 
 /* The green hamburger icon found on top, and in the middle, of some sections */
-.green-hamburger {
+.section-icon {
   display: block;
   margin: 25px auto;
 }
@@ -181,10 +181,6 @@ p {
   width: 100%;
 }
 
-.section--kit p {
-  /* margin-bottom: 20px; */
-}
-
 .section--kit p a {
   color: #fff;
 }
@@ -258,8 +254,6 @@ p {
 
 .fries-pic {
   width: 70px;
-  display: block;
-  margin: 0 auto 30px auto;
 }
 
 .pick-up p {
@@ -350,3 +344,52 @@ p {
 /* -------------------------------------------- */
 /* 'Contact-us' SECTION */
 /* -------------------------------------------- */
+.lets-talk-pic {
+  width: 100%;
+}
+
+.contact-us-padding {
+  padding: 40px 15px 50px 15px;
+}
+
+.social-media ion-icon {
+  font-size: 50px;
+  margin-right: 8px;
+}
+
+.social-media {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+/* -------------------------------------------- */
+/* END 'Contact-us' SECTION */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* 'Mailing list' SECTION */
+/* -------------------------------------------- */
+.section--mailing-list {
+  padding: 40px 15px 50px 15px;
+}
+
+form div {
+  /* outline: 1px solid white; */
+  text-align: center;
+}
+
+label {
+  margin-bottom: 25px;
+  font-size: 60%;
+}
+
+input {
+  /* display: block; */
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  border: 2px solid #fff;
+  margin-top: 3px;
+}
+
+/* To do for tomorrow: Finish of adding elements to the form */
