@@ -15,22 +15,23 @@
           src="Images/logo-shake-shack.png"
           alt="Shake Shack logo"
         />
-        <nav class="hide-class">
-          <ul>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Order Online</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Stand for Something Good</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </nav>
 
         <div class="ham-border">
           <span class="ham"></span>
         </div>
         <a class="order-link" href="#">Order Online</a>
       </div>
+
+      <nav class="header-nav hide-class">
+        <ul>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Order Online</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Stand for Something Good</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -261,7 +262,7 @@
           <a class="link" href="#">Contact Us</a>
 
           <div class="social-media">
-            <ion-icon class="facebook" name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-facebook"></ion-icon>
             <ion-icon name="logo-twitter"></ion-icon>
             <ion-icon name="logo-instagram"></ion-icon>
           </div>
@@ -286,9 +287,89 @@
             <label for="email">Email</label>
             <input type="text" id="email" name="email" />
           </div>
+
+          <label class="date-of-birth">Date of Birth</label>
+          <div class="select-wrapper">
+            <select id="dob-day" name="dob">
+              <option value="day">Day</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+            </select>
+            <select id="dob-month" name="dob">
+              <option value="Mon">Month</option>
+              <option value="jan">Jan</option>
+              <option value="feb">Feb</option>
+              <option value="mar">Mar</option>
+              <option value="apr">Apr</option>
+              <option value="may">May</option>
+              <option value="jun">Jun</option>
+              <option value="jul">Jul</option>
+              <option value="aug">Aug</option>
+              <option value="Sep">Sep</option>
+              <option value="oct">Oct</option>
+              <option value="nov">Nov</option>
+              <option value="dec">Dec</option>
+            </select>
+          </div>
         </form>
+
+        <p>Opt-In</p>
+        <p>
+          <em
+            >I want to receive Shake Shack’s marketing emails. By submitting
+            this form, I acknowledge that the information provided will be
+            transferred & processed through Shake Shack’s marketing automation
+            platform, Sprout, in accordance with the
+          </em>
+        </p>
+        <p><strong>Sign Up to Shake Shack</strong></p>
+        <div>
+          <p class="optIn-sub">
+            <a class="subscribe" href="#">SUBSCRIBE</a>
+          </p>
+        </div>
       </section>
     </main>
+    <footer>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Allergen Information</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-social-media">
+        <ion-icon class="facebook" name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+      </div>
+
+      <p class="footer-legal">
+        ©2004-2021 Shake Shack. all rights reserved. Some information on this
+        site may vary slightly by location and in stadiums, event venues and
+        international shacks.
+      </p>
+    </footer>
     <!-- Ion icons -->
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   </body>

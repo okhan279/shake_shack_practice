@@ -40,7 +40,8 @@ p {
 .col {
   width: 100%;
 }
-/* Anchor elements found at the end of some sections */
+
+/* Anchor elements found at the bottom of some sections */
 .link {
   text-decoration: none;
   color: #66b245;
@@ -51,12 +52,12 @@ p {
   border-radius: 25px;
   text-transform: uppercase;
   display: block;
-  /* margin: 40px auto 0 auto; */
   text-align: center;
   margin-top: 40px;
   z-index: 10;
 }
 
+/* h3 headings */
 .heading {
   font-family: "Dancing Script", sans-serif;
   font-size: 150%;
@@ -74,7 +75,6 @@ p {
 /* HEADER */
 /* -------------------------------------------- */
 .container-1 {
-  /* display: flex; */
   padding: 20px 3%;
   display: inline-block;
   width: 100%;
@@ -84,6 +84,21 @@ p {
 .logo {
   width: 150px;
   float: left;
+}
+
+.header-nav ul {
+  text-align: center;
+  font-size: 50%;
+  background-color: #f1f2ed;
+  margin-top: -6.6px;
+  padding-bottom: 2px;
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+  color: #66b245;
+  display: block;
+  margin-bottom: 6px;
 }
 
 /* -------------------------------------------- */
@@ -369,13 +384,20 @@ p {
 /* -------------------------------------------- */
 /* 'Mailing list' SECTION */
 /* -------------------------------------------- */
-.section--mailing-list {
-  padding: 40px 15px 50px 15px;
+
+.section--mailing-list .heading,
+.section--mailing-list p {
+  padding: 0px 15px 0px 15px;
 }
 
+.section--mailing-list p {
+  font-size: 14px;
+}
+
+/* The Div elements inside the <form> tag */
 form div {
-  /* outline: 1px solid white; */
   text-align: center;
+  padding: 0 22px;
 }
 
 label {
@@ -384,7 +406,6 @@ label {
 }
 
 input {
-  /* display: block; */
   width: 100%;
   height: 50px;
   background-color: #000;
@@ -392,4 +413,114 @@ input {
   margin-top: 3px;
 }
 
-/* To do for tomorrow: Finish of adding elements to the form */
+.date-of-birth {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+select {
+  width: 47%;
+  height: 50px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  margin-top: -8px;
+  margin-bottom: 20px;
+  appearance: none;
+  padding-left: 15px;
+}
+
+select:first-child {
+  float: left;
+}
+
+select:last-child {
+  float: right;
+}
+
+/*--- For the "▼" element in the 'Date of Birth' boxes ---*/
+.select-wrapper {
+  position: relative;
+}
+
+/* "▼" element for the month box */
+.select-wrapper::before {
+  content: "▼";
+  font-size: 12px;
+  right: 32px;
+  top: 9px;
+  position: absolute;
+}
+
+/* "▼" element for the day box */
+.select-wrapper::after {
+  content: "▼";
+  font-size: 12px;
+  right: 26px;
+  top: -3px;
+  position: relative;
+}
+/*--- END For the "▼" element in the 'Date of Birth' boxes ---*/
+
+/* 'OPT-IN' */
+.section--mailing-list p:nth-of-type(2) {
+  font-size: 60%;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* 'I want to recieve Shake Shack marketing...' */
+.section--mailing-list p:nth-of-type(3) {
+  font-size: 50%;
+  margin-bottom: 0px;
+}
+
+/* 'Sign up to Shake Shack' */
+.section--mailing-list p:nth-of-type(4) {
+  font-size: 60%;
+  margin-bottom: 7px;
+}
+
+.subscribe {
+  outline: 2px solid white;
+  padding: 2px 4px;
+  text-decoration: none;
+  color: #fff;
+}
+/* -------------------------------------------- */
+/* END 'Mailing list' SECTION */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* FOOTER */
+/* -------------------------------------------- */
+footer {
+  padding: 0px 15px 0px 15px;
+}
+.footer-nav ul li a {
+  display: inline-block;
+  font-size: 60%;
+  color: #66b245;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.footer-nav ul {
+  text-align: center;
+}
+
+.footer-social-media {
+  font-size: 20px;
+  color: #66b245;
+  text-align: center;
+}
+
+.footer-social-media ion-icon {
+  margin: 10px 5px 25px 0;
+}
+
+.footer-legal {
+  font-size: 50%;
+  color: rgb(151, 151, 151);
+}
