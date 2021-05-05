@@ -13,6 +13,7 @@ body {
   background-color: #000;
   color: #fff;
   font-family: "Montserrat", sans-serif;
+  line-height: 23px;
 }
 
 p {
@@ -20,10 +21,6 @@ p {
   text-align: center;
   margin-bottom: 25px;
 }
-
-/* a {
-  font-weight: bold;
-} */
 
 .hide-class {
   display: none;
@@ -65,40 +62,10 @@ p {
   margin-bottom: 25px;
 }
 
-/* The green hamburger icon found on top, and in the middle, of some sections */
+/* The picture found on top, and in the middle, of some sections */
 .section-icon {
   display: block;
   margin: 25px auto;
-}
-
-/* -------------------------------------------- */
-/* HEADER */
-/* -------------------------------------------- */
-.container-1 {
-  padding: 20px 3%;
-  display: inline-block;
-  width: 100%;
-  background-color: #f1f2ed;
-}
-
-.logo {
-  width: 150px;
-  float: left;
-}
-
-.header-nav ul {
-  text-align: center;
-  font-size: 50%;
-  background-color: #f1f2ed;
-  margin-top: -6.6px;
-  padding-bottom: 2px;
-}
-
-.header-nav ul li a {
-  text-decoration: none;
-  color: #66b245;
-  display: block;
-  margin-bottom: 6px;
 }
 
 /* -------------------------------------------- */
@@ -111,13 +78,14 @@ p {
   background-color: #fff;
   border-radius: 5px;
   display: block;
-  margin: 17px auto; /* Centers the 3 lines */
+  margin: 18px auto; /* Centers the 3 lines */
 }
 
+/* Top line in the ham icon */
 .ham::before {
   content: "";
   position: absolute;
-  top: 28px;
+  top: 30px;
   width: 35px;
   height: inherit;
   background-color: inherit;
@@ -136,7 +104,7 @@ p {
 
 .ham-border {
   width: 45px;
-  height: 40px;
+  height: 41px;
   float: right;
   border-radius: 5px;
   background-color: #66b245;
@@ -145,13 +113,44 @@ p {
 /* END HAMBURGER ICON */
 /* -------------------------------------------- */
 
+/* -------------------------------------------- */
+/* HEADER */
+/* -------------------------------------------- */
+.container-1 {
+  padding: 20px 3%;
+  display: inline-block;
+  width: 100%;
+  background-color: #f1f2ed;
+}
+
+.logo {
+  width: 150px;
+  float: left;
+  margin-top: 3px;
+}
+
+.header-nav ul {
+  text-align: center;
+  font-size: 50%;
+  background-color: #f1f2ed;
+  margin-top: -6.6px;
+  padding-bottom: 2px;
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+  color: #66b245;
+  display: block;
+  margin-bottom: 6px;
+}
+
 .order-link {
   background-color: #66b245;
   color: #fff;
   font-size: 50%;
   float: right;
   margin-right: 5px;
-  padding: 13px 3%;
+  padding: 9.5px 3%;
   border-radius: 5px;
   text-decoration: none;
 }
@@ -160,6 +159,9 @@ p {
   width: 100%;
   height: 50%;
 }
+/* -------------------------------------------- */
+/* END HEADER */
+/* -------------------------------------------- */
 
 /* -------------------------------------------- */
 /* 'Our Story' SECTION */
@@ -186,7 +188,7 @@ p {
 /* -------------------------------------------- */
 
 /* -------------------------------------------- */
-/* 'ShackBurger Kits' SECTION */
+/* 'ShackBurger DIY Kits' SECTION */
 /* -------------------------------------------- */
 .shackburger-kit {
   padding: 20px 15px 50px 15px;
@@ -244,7 +246,6 @@ p {
 /* Part 1 of this section: Pick up */
 .pick-up {
   background-color: #66b245;
-  /* padding: 0; */
 }
 
 .pick-up-padding,
@@ -260,8 +261,9 @@ p {
   height: 75%;
   background-image: url("/Images/food-and-drink-fries.png");
   background-repeat: no-repeat;
-  background-size: 230px;
-  background-position: bottom 80px left -70px;
+  /* background-size: 290px; */
+  background-size: 290px;
+  background-position: bottom left -40px;
   position: absolute;
   left: 0px;
   opacity: 0.3;
@@ -363,6 +365,14 @@ p {
   width: 100%;
 }
 
+.section--contact-us p {
+  margin-bottom: 40px;
+}
+
+.section-icon {
+  margin-bottom: 40px;
+}
+
 .contact-us-padding {
   padding: 40px 15px 50px 15px;
 }
@@ -449,7 +459,7 @@ select:last-child {
   content: "▼";
   font-size: 12px;
   right: 32px;
-  top: 9px;
+  top: 6px;
   position: absolute;
 }
 
@@ -458,7 +468,7 @@ select:last-child {
   content: "▼";
   font-size: 12px;
   right: 26px;
-  top: -3px;
+  top: 2px;
   position: relative;
 }
 /*--- END For the "▼" element in the 'Date of Birth' boxes ---*/
@@ -524,3 +534,45 @@ footer {
   font-size: 50%;
   color: rgb(151, 151, 151);
 }
+/* -------------------------------------------- */
+/* END FOOTER */
+/* -------------------------------------------- */
+
+@media only screen and (min-width: 640px) {
+  .section--story {
+    padding: 90px 75px;
+  }
+
+  .shackburger-kit {
+    padding: 45px 75px 90px 75px;
+  }
+
+  .pick-up-padding,
+  .delivered-padding {
+    padding: 60px 75px 90px 75px;
+  }
+
+  .ethics-padding {
+    padding: 90px 75px;
+  }
+
+  .vacancies-padding {
+    padding: 60px 60px 70px 60px;
+  }
+
+  .contact-us-padding {
+    padding: 60px 65px 70px 65px;
+  }
+
+  .select-wrapper::after {
+    right: 35px;
+  }
+
+  input {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
+/* Carry on woring on the input tag for the media query */
