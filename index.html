@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/Resources/CSS/style.css" />
     <title>Document</title>
   </head>
   <body>
@@ -277,19 +277,25 @@
         </p>
 
         <form>
-          <div>
-            <label for="first-name">First name</label>
-            <input type="text" id="first-name" name="first-name" />
+          <div class="mail-padding">
+            <!-- <div class="name-inline"> -->
+            <div class="form-group1 form-group">
+              <label id="name" for="first-name">First name</label>
+              <input type="text" id="first-name" name="first-name" />
+            </div>
 
-            <label for="last-name">Last name</label>
-            <input type="text" id="last-name" name="last-name" />
+            <div class="form-group2 form-group">
+              <label for="last-name">Last name</label>
+              <input type="text" id="last-name" name="last-name" />
+            </div>
+            <!-- </div> -->
 
             <label for="email">Email</label>
             <input type="text" id="email" name="email" />
           </div>
 
           <label class="date-of-birth">Date of Birth</label>
-          <div class="select-wrapper">
+          <div class="mail-padding select-wrapper">
             <select id="dob-day" name="dob">
               <option value="day">Day</option>
               <option value="1">1</option>
@@ -350,6 +356,7 @@
     </main>
     <footer>
       <nav class="footer-nav">
+        <hr />
         <ul>
           <li><a href="#">Careers</a></li>
           <li><a href="#">Contact Us</a></li>

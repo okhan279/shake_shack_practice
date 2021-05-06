@@ -405,14 +405,23 @@ p {
 }
 
 /* The Div elements inside the <form> tag */
-form div {
+/* form div { */
+.mail-padding {
   text-align: center;
   padding: 0 22px;
 }
 
 label {
-  margin-bottom: 25px;
+  display: block;
+  margin-top: 10px;
   font-size: 60%;
+}
+
+/* <label> tag for 'Date of Birth' */
+.date-of-birth {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 input {
@@ -423,12 +432,6 @@ input {
   margin-top: 3px;
 }
 
-.date-of-birth {
-  display: block;
-  margin-top: 20px;
-  text-align: center;
-}
-
 select {
   width: 47%;
   height: 50px;
@@ -437,16 +440,13 @@ select {
   border: 2px solid #fff;
   margin-top: -8px;
   margin-bottom: 20px;
-  appearance: none;
+  appearance: none; /* Removes the default arrows */
   padding-left: 15px;
 }
 
+/* 'Day' dropbox */
 select:first-child {
-  float: left;
-}
-
-select:last-child {
-  float: right;
+  margin-right: 4%;
 }
 
 /*--- For the "▼" element in the 'Date of Birth' boxes ---*/
@@ -467,8 +467,8 @@ select:last-child {
 .select-wrapper::after {
   content: "▼";
   font-size: 12px;
-  right: 26px;
-  top: 2px;
+  left: -28px;
+  top: -60px;
   position: relative;
 }
 /*--- END For the "▼" element in the 'Date of Birth' boxes ---*/
@@ -506,18 +506,29 @@ select:last-child {
 /* FOOTER */
 /* -------------------------------------------- */
 footer {
-  padding: 0px 15px 0px 15px;
+  padding: 20px 15px 20px 15px;
 }
+
+hr {
+  opacity: 0.25;
+}
+
 .footer-nav ul li a {
   display: inline-block;
   font-size: 60%;
   color: #66b245;
   text-decoration: none;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  list-style-type: none;
+}
+
+.footer-nav ul li {
+  list-style-type: none;
 }
 
 .footer-nav ul {
   text-align: center;
+  margin-top: 20px;
 }
 
 .footer-social-media {
@@ -539,40 +550,121 @@ footer {
 /* -------------------------------------------- */
 
 @media only screen and (min-width: 640px) {
+  /*----- 'Our Story' SECTION -----*/
   .section--story {
     padding: 90px 75px;
   }
 
+  /*----- 'ShackBurger DIY Kits' SECTION -----*/
   .shackburger-kit {
     padding: 45px 75px 90px 75px;
   }
 
+  /*----- 'Order' SECTION -----*/
   .pick-up-padding,
   .delivered-padding {
     padding: 60px 75px 90px 75px;
   }
 
+  /*----- 'Ethics' SECTION -----*/
   .ethics-padding {
     padding: 90px 75px;
   }
 
+  /*----- 'Vacancies' SECTION -----*/
   .vacancies-padding {
     padding: 60px 60px 70px 60px;
   }
 
+  /*----- 'Contact-us' SECTION -----*/
   .contact-us-padding {
     padding: 60px 65px 70px 65px;
+  }
+
+  /*----- 'Mailing list' SECTION -----*/
+  .section--mailing-list {
+    padding: 60px 65px 15px 65px;
+  }
+
+  form {
+    padding: 0 60px;
   }
 
   .select-wrapper::after {
     right: 35px;
   }
 
-  input {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
+  /*----- FOOTER -----*/
+  footer {
+    padding: 0 105px;
   }
 }
 
-/* Carry on woring on the input tag for the media query */
+@media only screen and (min-width: 769px) {
+  .form-group {
+    display: inline-block;
+    width: 47%;
+  }
+
+  /* Pushes both boxes to the sides */
+  .form-group1 {
+    margin-right: 4%;
+  }
+
+  /* .form-group1, */
+  /* .form-group2 { */
+  /* width: 40%; */
+  /* border: 1px solid orange; */
+  /* } */
+
+  /* .name-inilne {
+    display: inline-block;
+    width: 90%;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+    border: 1px solid orange;
+  } */
+  /* .name-inline div {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid orange;
+  }
+
+  .name-inline div label {
+    display: block;
+  }
+
+  .name-inline div input:first-of-type {
+    width: 40%;
+    float: left;
+    display: block;
+  }
+
+  .name-inline div label:first-of-type {
+    float: left;
+    margin-top: 0;
+  } */
+
+  /* 'First Name' input box */
+  /* .name-inline div input:first-of-type {
+    float: left;
+    width: 40%;
+  } */
+
+  /* 'Frist Name' */
+  /* .name-inline div label:first-of-type {
+    width: 40%;
+    margin: 0;
+    border: 1px solid cyan;
+  } */
+
+  /* .name-inline div input:last-of-type {
+    float: right;
+    width: 40%;
+  }
+
+  .name-inline div label:last-of-type {
+    float: right;
+    margin: 0;
+  } */
+}
