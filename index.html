@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/Resources/CSS/style.css" />
+    <link rel="stylesheet" href="/Vendors/CSS/grid.css" />
     <title>Document</title>
   </head>
   <body>
@@ -22,14 +23,24 @@
         <a class="order-link" href="#">Order Online</a>
       </div>
 
-      <nav class="header-nav hide-class">
+      <nav class="header-nav hide-clas">
         <ul>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Locations</a></li>
-          <li><a href="#">Order Online</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Stand for Something Good</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a class="nav-menu" href="#">Menu</a></li>
+          <li>
+            <a class="nav-locations" href="#">Locations</a>
+          </li>
+          <li>
+            <a class="nav-order" href="#">Order Online</a>
+          </li>
+        </ul>
+        <ul>
+          <li><a class="nav-blog" href="#">Blog</a></li>
+          <li>
+            <a class="nav-good" href="#">Stand for Something Good</a>
+          </li>
+          <li>
+            <a class="nav-contact" href="#">Contact Us</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -278,7 +289,6 @@
 
         <form>
           <div class="mail-padding">
-            <!-- <div class="name-inline"> -->
             <div class="form-group1 form-group">
               <label id="name" for="first-name">First name</label>
               <input type="text" id="first-name" name="first-name" />
@@ -288,9 +298,8 @@
               <label for="last-name">Last name</label>
               <input type="text" id="last-name" name="last-name" />
             </div>
-            <!-- </div> -->
 
-            <label for="email">Email</label>
+            <label for="email">E-mail</label>
             <input type="text" id="email" name="email" />
           </div>
 

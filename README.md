@@ -14,6 +14,12 @@ NOTE:
    set the <li> elements to 'display: inline-block'
    set the <nav> to 'text-align: center'
 
+4. To make two input boxes with labels side by side:
+   Wrap <input> and <label> tag in a <div> container.
+   set them as inline-block.
+   set width of the input boxes.
+   This was done in the media query (769px) with the form at the bottom
+
 Note:
 
 - I need to go back on the form and make it so the arrows in the Date of Birth respond to the click and the
