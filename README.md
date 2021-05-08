@@ -20,6 +20,10 @@ NOTE:
    set width of the input boxes.
    This was done in the media query (769px) with the form at the bottom
 
+   5. To crop an image:
+      set width and height. Use 'object-fit' property.
+      Example of this can be found in media query 800px for the two cropped images
+
 Note:
 
 - I need to go back on the form and make it so the arrows in the Date of Birth respond to the click and the

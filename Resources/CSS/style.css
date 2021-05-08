@@ -192,6 +192,7 @@ p {
 /* -------------------------------------------- */
 .shackburger-kit {
   padding: 20px 15px 50px 15px;
+  background-color: #000;
 }
 
 .shackburger-img-1 {
@@ -679,4 +680,15 @@ hr {
   /* -------------------------------------------- */
   /* 'Our Story' SECTION */
   /* -------------------------------------------- */
+  .section--story {
+    padding-bottom: 200px;
+    z-index: 10;
+  }
+
+  .cropped img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: 0 50%;
+  }
 }
