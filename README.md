@@ -30,3 +30,5 @@ Note:
   dropdown menu opens up.
 - Look at the "▼" on the 'Day' form. It is not fully fixed inside the box when changing resolution. Look into
   whey that may be.
+- An interesting question to ask. In the 'section--kit' for media query 960px, when using 'postion: relative' and 'bottom: 960px' the section underneath it does not adjust to its natural position. But when using 'margin-top: -960px' the element moves up and the section underneath takes back its natural position.
+  Also why does 'margin-bottom' not work but 'margin-top' with a negative value does work.
