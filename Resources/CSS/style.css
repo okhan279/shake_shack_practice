@@ -705,7 +705,7 @@ hr {
   }
 
   .shackburger-img-1 {
-    display: block;
+    display: none;
     visibility: hidden;
     opacity: 0.1;
   }
@@ -722,7 +722,6 @@ hr {
   /*----- 'ShackBurger DIY Kits' SECTION -----*/
   .section--kit {
     margin-top: 0px;
-    padding: 0;
   }
 
   .shackburger-kit {
@@ -730,8 +729,7 @@ hr {
     float: right;
     /* position: relative;
     bottom: 965px; */
-    margin-top: -960px;
-    margin-bottom: 0;
+    /* margin-top: -960px; */
     border: 1px solid red;
   }
 
@@ -739,13 +737,16 @@ hr {
     width: 50%;
     height: 936.2px;
     float: left;
-    margin-bottom: 0;
     /* position: relative;
     bottom: 965px; */
-    margin-top: -960px;
+    /* margin-top: -960px; */
     background-image: url("/Images/Shackburger-kit-compressed-495x495.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+
+  .section--order {
+    margin-top: 935px;
   }
 }
