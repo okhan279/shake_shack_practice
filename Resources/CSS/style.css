@@ -34,11 +34,6 @@ p {
 /* -------------------------------------------- */
 /* REUSEABLE COMPONENTS */
 /* -------------------------------------------- */
-.row {
-  max-width: 1140px; /*Only width value that will have absolute units*/
-  margin: 0 auto; /*Centers the content*/
-}
-
 .col {
   width: 100% !important;
 }
@@ -159,6 +154,8 @@ p {
 .header-pic {
   width: 100%;
   height: 50%;
+  margin-top: -2.6px;
+  max-height: 550px;
 }
 /* -------------------------------------------- */
 /* END HEADER */
@@ -194,6 +191,7 @@ p {
 .shackburger-kit {
   padding: 20px 15px 50px 15px;
   background-color: #000;
+  height: 937px;
 }
 
 .shackburger-img-1 {
@@ -204,7 +202,7 @@ p {
   color: #fff;
 }
 
-/* Kit Includes: */
+/* 'Kit Includes:' */
 .section--kit strong {
   font-size: 60%;
   display: block;
@@ -219,7 +217,7 @@ p {
 }
 
 .kit-details {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .link {
@@ -309,12 +307,19 @@ p {
 /* -------------------------------------------- */
 /* 'Ethics' SECTION */
 /* -------------------------------------------- */
+.section--ethics {
+  position: relative;
+  /* width: 90vw;
+  height: 90vh;
+  margin: auto; */
+}
+
 .ethics-pic {
   width: 100%;
 }
 
 .ethics-padding {
-  padding: 40px 15px 50px 15px;
+  padding: 50px 15px 50px 15px;
 }
 
 .section--ethics p {
@@ -336,7 +341,6 @@ p {
 }
 
 .vacancies-psuedo::before {
-  /* outline: 1px solid white; */
   content: "";
   display: block;
   width: 100%;
@@ -402,7 +406,6 @@ p {
 }
 
 /* The Div elements inside the <form> tag */
-/* form div { */
 .mail-padding {
   text-align: center;
   padding: 0 22px;
@@ -422,11 +425,13 @@ label {
 }
 
 input {
-  width: 100%;
+  width: 99%;
   height: 50px;
   background-color: #000;
   border: 2px solid #fff;
   margin-top: 3px;
+  color: #fff;
+  font-size: 16px;
 }
 
 select {
@@ -437,7 +442,7 @@ select {
   border: 2px solid #fff;
   margin-top: -8px;
   margin-bottom: 20px;
-  appearance: none; /* Removes the default arrows */
+  /* appearance: none; Removes the default arrows */
   padding-left: 15px;
 }
 
@@ -446,29 +451,30 @@ select:first-child {
   margin-right: 4%;
 }
 
-/*--- For the "▼" element in the 'Date of Birth' boxes ---*/
-.select-wrapper {
+/*---------------- For the "▼" element in the 'Date of Birth' boxes ----------------*/
+/* .select-wrapper {
   position: relative;
-}
+} */
 
 /* "▼" element for the month box */
-.select-wrapper::before {
+/* .select-wrapper::before {
   content: "▼";
   font-size: 12px;
   right: 32px;
   top: 6px;
   position: absolute;
-}
+} */
 
-/* "▼" element for the day box */
-.select-wrapper::after {
+/* "▼" element for the 'Day' box */
+/* .select-wrapper::after {
   content: "▼";
   font-size: 12px;
   left: -28px;
   top: -60px;
   position: relative;
-}
-/*--- END For the "▼" element in the 'Date of Birth' boxes ---*/
+}  */
+
+/*----------------  END For the "▼" element in the 'Date of Birth' boxes ---------------- */
 
 /* 'OPT-IN' */
 .section--mailing-list p:nth-of-type(2) {
@@ -489,7 +495,8 @@ select:first-child {
   margin-bottom: 7px;
 }
 
-.subscribe {
+/* 'SUBSCRIBE' { */
+.optIn-sub a {
   outline: 2px solid white;
   padding: 2px 4px;
   text-decoration: none;
@@ -554,7 +561,7 @@ hr {
 
   /*----- 'ShackBurger DIY Kits' SECTION -----*/
   .shackburger-kit {
-    padding: 45px 75px 90px 75px;
+    padding: 90px 75px 90px 75px;
   }
 
   /*----- 'Order' SECTION -----*/
@@ -604,9 +611,9 @@ hr {
     margin-bottom: 10px;
   }
 
-  /* Pushes both boxes to the sides */
+  /* Styles the 'First name' <input> box */
   .form-group1 {
-    margin-right: 4%;
+    margin-right: 20px;
   }
 }
 
@@ -644,6 +651,15 @@ hr {
     background-position: center;
   }
 
+  .nav-border {
+    border: 1px solid red;
+    width: 100%;
+    max-width: 950px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .header-nav ul {
     background-color: inherit;
     padding-bottom: 0;
@@ -658,22 +674,33 @@ hr {
     line-height: 12px;
   }
 
+  /* 'Menu', 'Locations', 'Order Online' container */
   .header-nav ul:first-child {
-    position: relative;
+    /* position: relative;
     left: -100px;
-    top: -15px;
+    top: -15px; */
     background-color: transparent;
+    width: 38%;
+    /* float: left; */
+    margin-right: 20%;
   }
 
+  .header-nav ul:first-child li {
+    margin-left: 1%;
+  }
+
+  /* 'Blog', 'Stand for Something Good', 'Contact Us' container */
   .header-nav ul:last-child {
-    position: relative;
+    /* position: relative;
     left: 120px;
-    top: -15px;
+    top: -15px; */
     background-color: transparent;
+    margin-right: 0px;
+    float: right;
   }
 
   .header-nav ul:last-child li {
-    margin-right: 5px;
+    margin-left: 0px;
   }
 
   .nav-order {
@@ -706,17 +733,26 @@ hr {
 
   .shackburger-img-1 {
     display: none;
-    visibility: hidden;
-    opacity: 0.1;
   }
 
   .happy-workers-pic {
     display: block;
   }
 
+  .heading {
+    line-height: 40px;
+  }
+
   /*----- 'Our Story' SECTION -----*/
   .section--story {
     padding: 140px 200px;
+  }
+
+  .story-p1,
+  .story-p2 {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /*----- 'ShackBurger DIY Kits' SECTION -----*/
@@ -727,26 +763,196 @@ hr {
   .shackburger-kit {
     width: 50%;
     float: right;
-    /* position: relative;
-    bottom: 965px; */
-    /* margin-top: -960px; */
-    border: 1px solid red;
   }
 
-  .background-image {
+  .background-image-kit {
     width: 50%;
     height: 936.2px;
     float: left;
-    /* position: relative;
-    bottom: 965px; */
-    /* margin-top: -960px; */
     background-image: url("/Images/Shackburger-kit-compressed-495x495.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
+  /*----- 'Order' SECTION -----*/
   .section--order {
-    margin-top: 935px;
+    clear: both;
+  }
+
+  /* 'Order for pick up' box */
+  .pick-up {
+    width: 50%;
+    float: left;
+  }
+
+  /* 'Get your fix delivered' box */
+  .delivered {
+    width: 50%;
+    float: right;
+  }
+
+  /* 'Order for pick up' box */
+  .pick-up-container {
+    height: 900px;
+  }
+
+  .pick-up-padding {
+    padding-top: 90px;
+  }
+
+  /*----- 'Ethics' SECTION -----*/
+  .ethics-pic {
+    display: none;
+  }
+
+  .ethics-text-container {
+    width: 50%;
+    height: 100vh;
+    /* background-color: orange; */
+    float: left;
+  }
+
+  .background-image-ethics {
+    width: 50%;
+    height: 100vh;
+    float: right;
+    clear: both;
+    background-image: url("/Images/shake_shack_ethics_pic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /*----- 'Vacancies' SECTION -----*/
+  .happy-workers-pic {
+    display: none;
+  }
+
+  .vacancies-padding {
+    /* margin-top: -100px; */
+  }
+
+  .background-image-vacancies {
+    width: 50%;
+    height: 100vh;
+    float: left;
+    clear: both;
+    background-image: url("/Images/happy-workers-2-495x743.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .vacancies-float {
+    width: 50%;
+    height: 100vh;
+    float: right;
+    padding-top: 140px;
+  }
+
+  .vacancies-psuedo::before {
+    background-position: bottom left -230px;
+  }
+
+  /*----- 'Contact-us' SECTION -----*/
+  .lets-talk-pic {
+    display: none;
+  }
+
+  .lets-talk-text {
+    width: 50%;
+    height: 100vh;
+    float: left;
+  }
+
+  .contact-us-padding {
+    /* padding-top: 100px; */
+  }
+
+  .background-image-contact {
+    width: 50%;
+    height: 100vh;
+    float: right;
+    background-image: url("/Images/lets-talk-495x330.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .section--mailing-list {
+    clear: both;
+  }
+
+  /*----- 'Mailing list' SECTION -----*/
+  .section--mailing-list {
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+
+  .section--mailing-list p {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .mailing-list-p {
+    max-width: 616px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* input box for 'First Name' and 'Last Name' */
+  .form-group {
+    max-width: 190px;
+  }
+
+  .privacy-policy {
+    max-width: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  hr {
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 'Day' dropdown box */
+  select:first-child {
+    margin-right: 12px;
+  }
+
+  /* input box for 'Day' and 'Month' */
+  select {
+    width: 186px;
+  }
+
+  /* Input box for 'E-mail' */
+  form > div > input {
+    width: 396px;
+  }
+
+  .form-group1 {
+    margin-right: 10px;
+    /* margin-left: 5px; */
+    /* margin-left: -10px; */
+  }
+
+  input {
+    position: relative;
+  }
+
+  /*----- FOOTER -----*/
+  footer {
+    padding-left: 260px;
+    padding-right: 260px;
+  }
+
+  .footer-legal {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

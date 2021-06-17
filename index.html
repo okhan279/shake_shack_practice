@@ -24,24 +24,26 @@
       </div>
 
       <nav class="header-nav hide-clas">
-        <ul>
-          <li><a class="nav-menu" href="#">Menu</a></li>
-          <li>
-            <a class="nav-locations" href="#">Locations</a>
-          </li>
-          <li>
-            <a class="nav-order" href="#">Order Online</a>
-          </li>
-        </ul>
-        <ul>
-          <li><a class="nav-blog" href="#">Blog</a></li>
-          <li>
-            <a class="nav-good" href="#">Stand for Something Good</a>
-          </li>
-          <li>
-            <a class="nav-contact" href="#">Contact Us</a>
-          </li>
-        </ul>
+        <div class="nav-border">
+          <ul>
+            <li><a class="nav-menu" href="#">Menu</a></li>
+            <li>
+              <a class="nav-locations" href="#">Locations</a>
+            </li>
+            <li>
+              <a class="nav-order" href="#">Order Online</a>
+            </li>
+          </ul>
+          <ul>
+            <li><a class="nav-blog" href="#">Blog</a></li>
+            <li>
+              <a class="nav-good" href="#">Stand for Something Good</a>
+            </li>
+            <li>
+              <a class="nav-contact" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -92,8 +94,8 @@
           src="/Images/cropped-Shackburger-kit-compressed-495x495.png"
           alt="Shack Burger Kit Cropped"
         />
-        <!-- This div is to hold the background image  -->
-        <div class="background-image"></div>
+        <!-- This div is to hold the background image for 960px  -->
+        <div class="background-image-kit"></div>
         <!-- ///////////// -->
         <div class="shackburger-kit">
           <img
@@ -132,7 +134,7 @@
 
       <section class="section--order">
         <div class="pick-up">
-          <div class="pick-up-padding">
+          <div class="pick-up-padding pick-up-container">
             <img
               class="section-icon fries-pic"
               src="/Images/food-and-drink-fries.png"
@@ -208,7 +210,12 @@
           src="/Images/shake_shack_ethics_pic.jpg"
           alt="Shake Shack Ethics Picture"
         />
-        <div class="ethics-padding">
+
+        <!-- This div is to hold the background image for 960px  -->
+        <div class="background-image-ethics"></div>
+        <!-- ///////////// -->
+
+        <div class="ethics-padding ethics-text-container">
           <h3 class="heading">Stand For Something Good</h3>
 
           <p>
@@ -248,7 +255,12 @@
           alt="Shake Shack Happy Workers Cropped"
         />
         <!-- ///////////// -->
-        <div class="vacancies-padding vacancies-psuedo">
+
+        <!-- This div is to hold the background image for 960px  -->
+        <div class="background-image-vacancies"></div>
+        <!-- ///////////// -->
+
+        <div class="vacancies-padding vacancies-psuedo vacancies-float">
           <img
             class="section-icon"
             src="/Images/food-and-drink-burger.png"
@@ -270,7 +282,11 @@
           src="/Images/lets-talk-495x330.jpg"
           alt="Lets Talk Pic"
         />
-        <div class="contact-us-padding">
+        <!-- This div is to hold the background image for 960px  -->
+        <div class="background-image-contact"></div>
+        <!-- ///////////// -->
+
+        <div class="contact-us-padding lets-talk-text">
           <img
             class="section-icon"
             src="/Images/home-envelope.png"
@@ -298,7 +314,7 @@
 
       <section class="section--mailing-list">
         <h6 class="heading">Join our Mailing List</h6>
-        <p>
+        <p class="mailing-list-p">
           Need more Shack in your life? Join our mailing list and we’ll keep you
           in the loop on all the latest and greatest Shack happenings.
         </p>
@@ -363,22 +379,23 @@
         </form>
 
         <p>Opt-In</p>
-        <p>
+        <p class="privacy-policy">
           <em
             >I want to receive Shake Shack’s marketing emails. By submitting
             this form, I acknowledge that the information provided will be
             transferred & processed through Shake Shack’s marketing automation
-            platform, Sprout, in accordance with the
+            platform, Sprout, in accordance with the privacy policy.
           </em>
         </p>
         <p><strong>Sign Up to Shake Shack</strong></p>
         <div>
           <p class="optIn-sub">
-            <a class="subscribe" href="#">SUBSCRIBE</a>
+            <a href="#">SUBSCRIBE</a>
           </p>
         </div>
       </section>
     </main>
+
     <footer>
       <nav class="footer-nav">
         <hr />

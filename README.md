@@ -32,3 +32,6 @@ Note:
   whey that may be.
 - An interesting question to ask. In the 'section--kit' for media query 960px, when using 'postion: relative' and 'bottom: 960px' the section underneath it does not adjust to its natural position. But when using 'margin-top: -960px' the element moves up and the section underneath takes back its natural position.
   Also why does 'margin-bottom' not work but 'margin-top' with a negative value does work.
+- Important note in using FLOATS on 'section--ethics': When using 'float:right' on the 'background-image-ethics' class, the content was not floating right. When I use 'clear: both' the content floated right.
+- If I wish to have it that an element does not expand when the screen width expands, I can always add a 'max-width' property to it. I had this problem with the form at the 'media query 906px', I asked on Stack Overflow and manage to find some good solutions.
+- LOOK INTO:
