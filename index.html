@@ -17,13 +17,31 @@
           alt="Shake Shack logo"
         />
 
-        <div class="ham-border">
-          <span class="ham"></span>
+        <!-- Hamburger Icon -->
+        <div class="ham-border" id="menu-toggle">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="cross">
+            <span></span>
+            <span></span>
+          </div>
         </div>
+        <!-- End Hamburger Icon -->
+
+        <!-- <div id="cross">
+          <span></span>
+          <span></span>
+        </div> -->
+
         <a class="order-link" href="#">Order Online</a>
       </div>
 
-      <nav class="header-nav hide-clas">
+      <div id="header_placeholder"></div>
+
+      <nav class="header-nav hide-class">
         <div class="nav-border">
           <ul>
             <li><a class="nav-menu" href="#">Menu</a></li>
@@ -48,10 +66,20 @@
     </header>
 
     <main>
+      <div class="dot-container hide-clas show-415">
+        <div><p>&#183;</p></div>
+        <div><p>&#183;</p></div>
+        <div><p>&#183;</p></div>
+        <div><p>&#183;</p></div>
+        <div><p>&#183;</p></div>
+        <div><p>&#183;</p></div>
+        <div><p>&#183;</p></div>
+      </div>
+
       <img
-        class="header-pic"
-        src="Images/header-pic-shake-shack.jpg"
-        alt="Shake Shack header picture"
+        class="header-pic-1280 js--header-pic"
+        src="Images/header-pic.jpg"
+        alt="Shake Shack header picture laptop resolution"
       />
 
       <section class="section--story">
@@ -85,15 +113,17 @@
       <section class="section--kit">
         <img
           class="shackburger-img-1 hide-uncropped show-uncropped"
-          src="/Images/Shackburger-kit-compressed-495x495.png"
+          src="Images/Shackburger-kit-burger.png"
           alt="Shack Burger Kit"
         />
+
         <!-- Cropped image -->
         <img
           class="cropped-shackburger-img-1 hide-cropped show-cropped"
-          src="/Images/cropped-Shackburger-kit-compressed-495x495.png"
+          src="/Images/Shackburger-kit-burger-cropped.png"
           alt="Shack Burger Kit Cropped"
         />
+
         <!-- This div is to hold the background image for 960px  -->
         <div class="background-image-kit"></div>
         <!-- ///////////// -->
@@ -207,7 +237,7 @@
       <section class="section--ethics">
         <img
           class="ethics-pic"
-          src="/Images/shake_shack_ethics_pic.jpg"
+          src="/Images/shake-shack-ethics-pic.jpg"
           alt="Shake Shack Ethics Picture"
         />
 
@@ -245,13 +275,13 @@
       <section class="section--vacancies">
         <img
           class="happy-workers-pic hide-uncropped show-uncropped"
-          src="/Images/happy-workers-2-495x743.jpg"
+          src="/Images/happy-workers-pic.jpg"
           alt="Shake Shack Happy Workers"
         />
         <!-- Cropped image -->
         <img
           class="cropped-happy-workers-pic hide-cropped show-cropped"
-          src="Images/cropped-happy-workers-2-495x743.jpg"
+          src="Images/happy-workers-pic-cropped.jpg"
           alt="Shake Shack Happy Workers Cropped"
         />
         <!-- ///////////// -->
@@ -279,7 +309,7 @@
       <section class="section--contact-us">
         <img
           class="lets-talk-pic"
-          src="/Images/lets-talk-495x330.jpg"
+          src="/Images/lets-talk-pic.jpg"
           alt="Lets Talk Pic"
         />
         <!-- This div is to hold the background image for 960px  -->
@@ -419,7 +449,13 @@
         international shacks.
       </p>
     </footer>
+
     <!-- Ion icons -->
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- CDN for the jQuery API -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="Resources/JS/jquery.waypoints.min.js"></script>
+    <script src="Resources/JS/myscript.js"></script>
+    <!-- <script src="Vendors/JS/jquery.waypoints.min.js"></script> -->
   </body>
 </html>

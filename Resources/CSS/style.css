@@ -68,37 +68,65 @@ p {
   margin: 25px auto;
 }
 
-/*----- HAMBURGER ICON -----*/
-/* Middle line in the ham icon */
-.ham {
+/*----- HAMBURGER AND CROSS ICON -----*/
+span {
   height: 4px;
   width: 35px;
   background-color: #fff;
   border-radius: 5px;
   display: block;
-  margin: 18px auto; /* Centers the 3 lines */
 }
 
-/* Top line in the ham icon */
-.ham::before {
-  content: "";
-  position: absolute;
-  top: 30px;
-  width: 35px;
-  height: inherit;
-  background-color: inherit;
-  border-radius: inherit;
+/* Top hamburger line */
+.hamburger span:nth-child(1) {
+  margin-top: 9px;
+  margin-left: auto;
+  margin-right: auto;
+  transition-delay: 0.5s;
 }
 
-.ham::after {
-  content: "";
-  position: absolute;
-  top: 46px;
-  width: 35px;
-  height: inherit;
-  background-color: inherit;
-  border-radius: inherit;
+/* Middle hamburger line */
+.hamburger span:nth-child(2) {
+  margin-top: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  transition-delay: 0.625s;
 }
+
+/* Bottom hamburger line */
+.hamburger span:nth-child(3) {
+  margin-top: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  transition-delay: 0.75s;
+}
+
+/*----- Transition classes for the hamburger and cross -----*/
+.hamburger span:nth-child(1).transition {
+  width: 0;
+  transition-delay: 0s;
+}
+
+.hamburger span:nth-child(2).transition {
+  width: 0px;
+  transition-delay: 0.125s;
+}
+
+.hamburger span:nth-child(3).transition {
+  width: 0px;
+  transition-delay: 0.25s;
+}
+
+.cross span:nth-child(1).transition {
+  width: 35px;
+  transition-delay: 0.625s;
+}
+
+.cross span:nth-child(2).transition {
+  width: 35px;
+  transition-delay: 0.375s;
+}
+/*----- END Transition classes for the hamburger and cross -----*/
 
 .ham-border {
   width: 45px;
@@ -106,6 +134,35 @@ p {
   float: right;
   border-radius: 5px;
   background-color: #66b245;
+}
+
+.cross {
+  position: relative;
+  bottom: 32px;
+}
+
+.cross span:nth-child(1) {
+  height: 4px;
+  width: 0px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: block;
+  margin: 18px auto;
+  transform: rotate(45deg);
+  transition-delay: 0s;
+}
+
+.cross span:nth-child(2) {
+  height: 4px;
+  width: 0px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: block;
+  margin: 18px auto;
+  transform: rotate(-45deg);
+  position: relative;
+  bottom: 22px;
+  transition-delay: 0.25s;
 }
 /*----- END HAMBURGER ICON -----*/
 
@@ -117,6 +174,7 @@ p {
   display: inline-block;
   width: 100%;
   background-color: #f1f2ed;
+  /* display: none; */
 }
 
 .logo {
@@ -151,15 +209,49 @@ p {
   text-decoration: none;
 }
 
-.header-pic {
+.header-pic-1280 {
   width: 100%;
-  height: 50%;
+  height: 100%;
   margin-top: -2.6px;
   max-height: 550px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky-menu {
+  position: fixed;
+  top: 80px;
+  width: 100%;
+}
+
+/* This placeholder sits by the 'container-1' element. It stop the page from jumping when  */
+#header_placeholder {
+  height: 90px;
+  width: 100%;
+  display: none;
 }
 /* -------------------------------------------- */
 /* END HEADER */
 /* -------------------------------------------- */
+
+/* .dot-container {
+  width: 4%;
+  height: 330px;
+  opacity: 0.3;
+  left: 30px;
+  background-color: #000;
+  position: fixed;
+  border-radius: 100px;
+}
+
+.dot-container p {
+  font-size: 80px;
+  color: white;
+} */
 
 /* -------------------------------------------- */
 /* 'Our Story' SECTION */
@@ -171,7 +263,6 @@ p {
 .story-p1,
 .story-p2,
 .story-p3 {
-  /* border: 1px solid red; */
   margin-bottom: 25px;
 }
 
@@ -553,6 +644,46 @@ hr {
 /* END FOOTER */
 /* -------------------------------------------- */
 
+@media only screen and (min-width: 415px) {
+  .show-415 {
+    display: block;
+  }
+
+  /* The container for the white dots */
+  .dot-container {
+    width: 45px;
+    height: 330px;
+    opacity: 0.3;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    opacity: 0.3;
+    left: 4%;
+    background-color: #000;
+    position: fixed;
+    border-radius: 100px;
+    padding: 25px 0;
+  }
+
+  /* The white dot inside the container */
+  .dot-container p {
+    font-size: 50px;
+    position: relative;
+    bottom: 30%;
+    /* background-color: rgba(0, 0, 0, 1); */
+  }
+
+  /* The white circular border around the '.' */
+  .dot-container div {
+    border: 2px solid white;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    height: 8%;
+    border-radius: 100px;
+    /* background-color: rgba(0, 0, 0, 1); */
+  }
+}
+
 @media only screen and (min-width: 640px) {
   /*----- 'Our Story' SECTION -----*/
   .section--story {
@@ -651,10 +782,11 @@ hr {
     background-position: center;
   }
 
+  /* This container keeps the 6 nav items from moving completely out wide in the nav menu. It can
+      also be used to float the elements if needed.  */
   .nav-border {
-    border: 1px solid red;
     width: 100%;
-    max-width: 950px;
+    max-width: 800px;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -669,38 +801,36 @@ hr {
 
   .header-nav ul li {
     display: inline-block;
-    margin-right: 15px;
-    font-size: 110%;
     line-height: 12px;
   }
 
-  /* 'Menu', 'Locations', 'Order Online' container */
+  /* Container for 'Menu', 'Locations', 'Order Online'  */
   .header-nav ul:first-child {
-    /* position: relative;
-    left: -100px;
-    top: -15px; */
+    position: relative;
+    left: 55px;
+    top: 0px;
     background-color: transparent;
     width: 38%;
-    /* float: left; */
-    margin-right: 20%;
+    float: left;
   }
 
   .header-nav ul:first-child li {
-    margin-left: 1%;
+    height: 28px;
+    margin-left: 5%;
+    float: left;
   }
 
-  /* 'Blog', 'Stand for Something Good', 'Contact Us' container */
+  /* Container for 'Blog', 'Stand for Something Good', 'Contact Us'  */
   .header-nav ul:last-child {
-    /* position: relative;
-    left: 120px;
-    top: -15px; */
+    position: relative;
+    left: 105px;
+    top: -15px;
     background-color: transparent;
-    margin-right: 0px;
-    float: right;
   }
 
   .header-nav ul:last-child li {
-    margin-left: 0px;
+    margin-right: 10px;
+    /* outline: 1px solid red; */
   }
 
   .nav-order {
@@ -709,6 +839,12 @@ hr {
 
   .nav-good {
     width: 100px;
+    position: relative;
+    top: 10px;
+  }
+
+  .nav-contact {
+    width: 99%;
   }
 
   .header-nav ul li a {
@@ -769,7 +905,7 @@ hr {
     width: 50%;
     height: 936.2px;
     float: left;
-    background-image: url("/Images/Shackburger-kit-compressed-495x495.png");
+    background-image: url("/Images/Shackburger-kit-burger.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -818,7 +954,7 @@ hr {
     height: 100vh;
     float: right;
     clear: both;
-    background-image: url("/Images/shake_shack_ethics_pic.jpg");
+    background-image: url("/Images/shake-shack-ethics-pic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -838,7 +974,7 @@ hr {
     height: 100vh;
     float: left;
     clear: both;
-    background-image: url("/Images/happy-workers-2-495x743.jpg");
+    background-image: url("/Images/happy-workers-pic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -874,7 +1010,7 @@ hr {
     width: 50%;
     height: 100vh;
     float: right;
-    background-image: url("/Images/lets-talk-495x330.jpg");
+    background-image: url("/Images/lets-talk-pic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -955,4 +1091,20 @@ hr {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+@media only screen and (min-width: 1280px) {
+  /* HTML elements that have this class, will not display that particular element. */
+  /* .hide-1280 {
+    display: none;
+  }
+
+  .show-1280 {
+    display: block;
+  } */
+
+  /* .header-pic-1280 {
+    width: 100%;
+    height: 100%;
+  } */
 }

@@ -20,9 +20,16 @@ NOTE:
    set width of the input boxes.
    This was done in the media query (769px) with the form at the bottom
 
-   5. To crop an image:
-      set width and height. Use 'object-fit' property.
-      Example of this can be found in media query 800px for the two cropped images
+5. To crop an image:
+   set width and height. Use 'object-fit' property.
+   Example of this can be found in media query 800px for the two cropped images.
+
+6. When adding sticky nav to the header, the header was jumping some pixels along the page. I found the solution through 2 StackOverflow questions.
+
+- https://stackoverflow.com/questions/17842304/scrolling-sticky-header-jumping
+- https://stackoverflow.com/questions/28864210/sticky-navigation-element-jumps-during-scroll
+
+- In short: I added the class '<div id="header_placeholder"></div>', which substitutes in when the nav sticks to the top of the page. The StackOverflow answers explain this really well.
 
 Note:
 
