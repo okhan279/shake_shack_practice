@@ -69,6 +69,15 @@ p {
 }
 
 /*----- HAMBURGER AND CROSS ICON -----*/
+.ham-border {
+  width: 45px;
+  height: 41px;
+  float: right;
+  border-radius: 5px;
+  background-color: #66b245;
+}
+
+/* All the 5 lines for the Hamburger and Cross icons */
 span {
   height: 4px;
   width: 35px;
@@ -101,6 +110,33 @@ span {
   transition-delay: 0.75s;
 }
 
+.cross {
+  position: relative;
+  bottom: 32px;
+}
+
+/* The two lines for the cross */
+.cross span {
+  height: 4px;
+  width: 0px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: block;
+  margin: 18px auto;
+}
+
+.cross span:nth-child(1) {
+  transform: rotate(45deg);
+  transition-delay: 0s;
+}
+
+.cross span:nth-child(2) {
+  transform: rotate(-45deg);
+  position: relative;
+  bottom: 22px;
+  transition-delay: 0.25s;
+}
+
 /*----- Transition classes for the hamburger and cross -----*/
 .hamburger span:nth-child(1).transition {
   width: 0;
@@ -128,43 +164,7 @@ span {
 }
 /*----- END Transition classes for the hamburger and cross -----*/
 
-.ham-border {
-  width: 45px;
-  height: 41px;
-  float: right;
-  border-radius: 5px;
-  background-color: #66b245;
-}
-
-.cross {
-  position: relative;
-  bottom: 32px;
-}
-
-.cross span:nth-child(1) {
-  height: 4px;
-  width: 0px;
-  background-color: #fff;
-  border-radius: 5px;
-  display: block;
-  margin: 18px auto;
-  transform: rotate(45deg);
-  transition-delay: 0s;
-}
-
-.cross span:nth-child(2) {
-  height: 4px;
-  width: 0px;
-  background-color: #fff;
-  border-radius: 5px;
-  display: block;
-  margin: 18px auto;
-  transform: rotate(-45deg);
-  position: relative;
-  bottom: 22px;
-  transition-delay: 0.25s;
-}
-/*----- END HAMBURGER ICON -----*/
+/*----- END HAMBURGER AND CROSS ICON -----*/
 
 /* -------------------------------------------- */
 /* HEADER */
@@ -175,6 +175,7 @@ span {
   width: 100%;
   background-color: #f1f2ed;
   /* display: none; */
+  z-index: 99;
 }
 
 .logo {
@@ -228,7 +229,7 @@ span {
   width: 100%;
 }
 
-/* This placeholder sits by the 'container-1' element. It stop the page from jumping when  */
+/* This placeholder sits by the 'container-1' element. It stop the page from jumping when sticky nav is activated.  */
 #header_placeholder {
   height: 90px;
   width: 100%;
@@ -237,21 +238,6 @@ span {
 /* -------------------------------------------- */
 /* END HEADER */
 /* -------------------------------------------- */
-
-/* .dot-container {
-  width: 4%;
-  height: 330px;
-  opacity: 0.3;
-  left: 30px;
-  background-color: #000;
-  position: fixed;
-  border-radius: 100px;
-}
-
-.dot-container p {
-  font-size: 80px;
-  color: white;
-} */
 
 /* -------------------------------------------- */
 /* 'Our Story' SECTION */
@@ -280,9 +266,9 @@ span {
 /* 'ShackBurger DIY Kits' SECTION */
 /* -------------------------------------------- */
 .shackburger-kit {
-  padding: 20px 15px 50px 15px;
+  padding: 20px 15px 20px 15px;
   background-color: #000;
-  height: 937px;
+  height: 800px;
 }
 
 .shackburger-img-1 {
@@ -331,6 +317,10 @@ span {
 /* -------------------------------------------- */
 /* 'Order' SECTION */
 /* -------------------------------------------- */
+.section--order {
+  /* border: 1px solid red; */
+}
+
 /* Part 1 of this section: Pick up */
 .pick-up {
   background-color: #66b245;
@@ -653,14 +643,13 @@ hr {
   .dot-container {
     width: 45px;
     height: 330px;
-    opacity: 0.3;
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    opacity: 0.3;
     left: 4%;
-    background-color: #000;
+    background-color: rgb(22, 22, 22);
     position: fixed;
+    top: 150px;
     border-radius: 100px;
     padding: 25px 0;
+    z-index: 99;
   }
 
   /* The white dot inside the container */
@@ -668,19 +657,30 @@ hr {
     font-size: 50px;
     position: relative;
     bottom: 30%;
-    /* background-color: rgba(0, 0, 0, 1); */
+    /* visibility: visible; */
   }
 
-  /* The white circular border around the '.' */
+  /* The white circular border around the dot */
   .dot-container div {
-    border: 2px solid white;
     width: 55%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
     height: 8%;
     border-radius: 100px;
-    /* background-color: rgba(0, 0, 0, 1); */
+    border: 2px solid rgba(255, 255, 255, 0);
+    /* border: 2px solid white; */
+    /* opacity: 0.2; */
+    transition: all 0.5s;
+  }
+
+  /* Adds a white circle to the 1st dot by default */
+  .dot-container div:nth-child(1) {
+    border: 2px solid rgba(255, 255, 255, 1);
+  }
+
+  .display-circle {
+    border: 2px solid rgba(255, 255, 255, 1);
   }
 }
 
@@ -756,6 +756,11 @@ hr {
   /* Hides uncropped images */
   .hide-uncropped {
     display: none;
+  }
+
+  /* Displays the navigation menu  */
+  .header-nav {
+    display: block;
   }
 
   /* Shows cropped images */
@@ -899,6 +904,7 @@ hr {
   .shackburger-kit {
     width: 50%;
     float: right;
+    margin-top: -50px;
   }
 
   .background-image-kit {
@@ -914,6 +920,8 @@ hr {
   /*----- 'Order' SECTION -----*/
   .section--order {
     clear: both;
+    /* border: 1px solid red; */
+    height: 900px; /* I have set this height so that the JS code for the waypoint can read this section */
   }
 
   /* 'Order for pick up' box */
@@ -938,6 +946,10 @@ hr {
   }
 
   /*----- 'Ethics' SECTION -----*/
+  .section--ethics {
+    height: 100vh; /* I have set this height so that the JS code for the waypoint can read this section */
+  }
+
   .ethics-pic {
     display: none;
   }
@@ -945,7 +957,6 @@ hr {
   .ethics-text-container {
     width: 50%;
     height: 100vh;
-    /* background-color: orange; */
     float: left;
   }
 
@@ -961,12 +972,12 @@ hr {
   }
 
   /*----- 'Vacancies' SECTION -----*/
-  .happy-workers-pic {
-    display: none;
+  .section--vacancies {
+    height: 100vh; /* I have set this height so that the JS code for the waypoint can read this section */
   }
 
-  .vacancies-padding {
-    /* margin-top: -100px; */
+  .happy-workers-pic {
+    display: none;
   }
 
   .background-image-vacancies {

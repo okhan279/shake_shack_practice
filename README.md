@@ -23,6 +23,7 @@ NOTE:
 5. To crop an image:
    set width and height. Use 'object-fit' property.
    Example of this can be found in media query 800px for the two cropped images.
+   Or simply create a copy of the image and crop it through the tools on Mac.
 
 6. When adding sticky nav to the header, the header was jumping some pixels along the page. I found the solution through 2 StackOverflow questions.
 
@@ -30,6 +31,11 @@ NOTE:
 - https://stackoverflow.com/questions/28864210/sticky-navigation-element-jumps-during-scroll
 
 - In short: I added the class '<div id="header_placeholder"></div>', which substitutes in when the nav sticks to the top of the page. The StackOverflow answers explain this really well.
+
+7.  When writing the JS code for the Hamburger and Cross animation, I was unsure how to reverse the transition. I came across a code that had a very similar animation to the one I was after and took chunks from that code and implemented it into mine. The 'transition-delay' set on the original class is for when the animation reverses from the cross back to a hamburger. The 'transition-delay' set in the '.transition' classes is for when the animation transitions from Hamburger to a Cross.
+    The code I used to help me with this animation and transition:
+
+- https://codepen.io/designcouch/pen/hyFAD/
 
 Note:
 
