@@ -37,6 +37,10 @@ NOTE:
 
 - https://codepen.io/designcouch/pen/hyFAD/
 
+8.  In the Shake Shack website, I noticed that the Hero Image would increase in width and height until a certain width, and from there the image would zoom in, keeping the quality of the image. I could not figure out how to do this and found the solution by accident. By trying to understand how to have Slideshow for the 2 images, I found the solution, which is to set the 'height' of the image to a viewport height ('vh'). In this case:
+
+- height: 50vh :D:D:D. The video where I found this solution is https://www.youtube.com/watch?v=7ZO2RTMNSAY. A video on how to have slideshow by Traversy Media.
+
 Note:
 
 - I need to go back on the form and make it so the arrows in the Date of Birth respond to the click and the

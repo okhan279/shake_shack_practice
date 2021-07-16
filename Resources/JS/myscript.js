@@ -42,20 +42,20 @@ $(document).ready(function () {
   //dot 1
   $(".js--header-pic").waypoint(function () {
     $(".dot-container div:nth-child(1)").css({ border: "2px solid white" });
-    $(".dot-container div:nth-child(2)").removeClass("display-circle");
+    $(".dot-container div:nth-child(3)").css({ opacity: "0" });
+    $(".dot-container p:nth-child(2)").css({ color: "#66b245" }); //adds green colour to dot 1
+    $(".dot-container p:nth-child(4)").removeClass("green");
   });
 
   //dot 2
   $(".section--story").waypoint(
     function () {
-      $(".dot-container div:nth-child(1)").css({ border: "none" });
-      $(".dot-container div:nth-child(2)").addClass("display-circle");
-
-      // document
-      //   .querySelector(".dot-container div:nth-child(2)")
-      //   .classList.add("display-circle");
-
-      $(".dot-container div:nth-child(3)").removeClass("display-circle");
+      $(".dot-container div:nth-child(1)").css({ border: "none" }); //circle 1
+      $(".dot-container div:nth-child(3)").css({ opacity: "1" }); // circle 2
+      $(".dot-container div:nth-child(5)").css({ opacity: "0" }); //circle 3
+      $(".dot-container p:nth-child(4)").addClass("green"); //adds '.green' to dot 2
+      $(".dot-container p:nth-child(2)").css({ color: "#fff" }); //removes '.green' from dot 3
+      $(".dot-container p:nth-child(6)").removeClass("green"); //removes '.green' from dot 3
     },
     {
       offset: "80px;",
@@ -65,15 +65,11 @@ $(document).ready(function () {
   //dot 3
   $(".section--kit").waypoint(
     function () {
-      // $(".dot-container div:nth-child(3)").addClass("display-circle");
-      document
-        .querySelector(".dot-container div:nth-child(3)")
-        .classList.add("display-circle");
-      // $(".dot-container div:nth-child(3)").css({
-      //   border: "2px solid rgba(255, 255, 255, 1)",
-      // });
-      $(".dot-container div:nth-child(2)").removeClass("display-circle");
-      $(".dot-container div:nth-child(4)").removeClass("display-circle");
+      $(".dot-container div:nth-child(3)").css({ opacity: "0" }); //removes circle from dot 2
+      $(".dot-container div:nth-child(5)").css({ opacity: "1" }); //add circle to dot 3
+      $(".dot-container div:nth-child(7)").css({ opacity: "0" }); //removes circle from dot 4 (from scrolling upwards)
+      $(".dot-container p:nth-child(6)").addClass("green"); //adds '.green' to dot 3
+      $(".dot-container p:nth-child(4)").removeClass("green"); //removes '.green' from dot 2
     },
     {
       offset: "100px;",
@@ -83,12 +79,11 @@ $(document).ready(function () {
   //dot 4
   $(".section--order").waypoint(
     function () {
-      // $(".dot-container div:nth-child(4)").addClass("display-circle");
-      document
-        .querySelector(".dot-container div:nth-child(4)")
-        .classList.add("display-circle");
-      $(".dot-container div:nth-child(3)").removeClass("display-circle");
-      $(".dot-container div:nth-child(5)").removeClass("display-circle");
+      $(".dot-container div:nth-child(5)").css({ opacity: "0" });
+      $(".dot-container div:nth-child(7)").css({ opacity: "1" });
+      $(".dot-container div:nth-child(9)").css({ opacity: "0" });
+      $(".dot-container p:nth-child(8)").addClass("green"); //adds '.green' to dot 4
+      $(".dot-container p:nth-child(6)").removeClass("green"); //removes '.green' from dot 3
     },
     {
       offset: "100px;",
@@ -98,9 +93,11 @@ $(document).ready(function () {
   //dot 5
   $(".section--ethics").waypoint(
     function () {
-      $(".dot-container div:nth-child(5)").addClass("display-circle");
-      $(".dot-container div:nth-child(4)").removeClass("display-circle");
-      $(".dot-container div:nth-child(6)").removeClass("display-circle");
+      $(".dot-container div:nth-child(7)").css({ opacity: "0" });
+      $(".dot-container div:nth-child(9)").css({ opacity: "1" });
+      $(".dot-container div:nth-child(11)").css({ opacity: "0" });
+      $(".dot-container p:nth-child(10)").addClass("green"); //adds '.green' to dot 5
+      $(".dot-container p:nth-child(8)").removeClass("green"); //removes '.green' from dot 4
     },
     {
       offset: "100px;",
@@ -110,23 +107,37 @@ $(document).ready(function () {
   //dot 6
   $(".section--vacancies").waypoint(
     function () {
-      $(".dot-container div:nth-child(6)").addClass("display-circle");
-      $(".dot-container div:nth-child(5)").removeClass("display-circle");
-      $(".dot-container div:nth-child(7)").removeClass("display-circle");
+      $(".dot-container div:nth-child(9)").css({ opacity: "0" });
+      $(".dot-container div:nth-child(11)").css({ opacity: "1" });
+      $(".dot-container div:nth-child(13)").css({ opacity: "0" });
+      $(".dot-container p:nth-child(12)").addClass("green"); //adds '.green' to dot 6
+      $(".dot-container p:nth-child(10)").removeClass("green"); //removes '.green' from dot 5
     },
     {
-      offset: "100px;",
+      offset: "140px;",
     }
   );
 
   //dot 7
   $(".section--contact-us").waypoint(
     function () {
-      $(".dot-container div:nth-child(6)").removeClass("display-circle");
-      $(".dot-container div:nth-child(7)").addClass("display-circle");
+      $(".dot-container div:nth-child(11)").css({ opacity: "0" });
+      $(".dot-container div:nth-child(13)").css({ opacity: "1" });
+      $(".dot-container p:nth-child(14)").addClass("green"); //adds '.green' to dot 6
+      $(".dot-container p:nth-child(12)").removeClass("green"); //removes '.green' from dot 5
     },
     {
       offset: "100px;",
+    }
+  );
+
+  $(".section--mailing-list").waypoint(
+    function () {
+      $(".dot-container div:nth-child(13)").css({ opacity: "0" });
+      $(".dot-container p:nth-child(14)").removeClass("green"); //adds '.green' to dot 6
+    },
+    {
+      offset: "250px;",
     }
   );
 
@@ -134,8 +145,10 @@ $(document).ready(function () {
   //The green cart in the 'section--story' section. Moves the circle to the 1st dot when scrolling upwards from the 'section--kit' section.
   $(".home-cart").waypoint(
     function () {
-      $(".dot-container div:nth-child(2)").addClass("display-circle");
-      $(".dot-container div:nth-child(3)").removeClass("display-circle");
+      $(".dot-container div:nth-child(3)").css({ opacity: "1" });
+      $(".dot-container div:nth-child(5)").css({ opacity: "0" });
+      $(".dot-container p:nth-child(4)").addClass("green");
+      $(".dot-container p:nth-child(6)").removeClass("green"); //dot 3
     },
     {
       offset: "100px;",
@@ -145,8 +158,10 @@ $(document).ready(function () {
   //'Order DIY Kit'. Moves the circle to the 3rd dot when scrolling upwards from the 'section--order' section.
   $(".section--kit a").waypoint(
     function () {
-      $(".dot-container div:nth-child(3)").addClass("display-circle");
-      $(".dot-container div:nth-child(4)").removeClass("display-circle");
+      $(".dot-container div:nth-child(5)").css({ opacity: "1" });
+      $(".dot-container div:nth-child(7)").css({ opacity: "0" });
+      $(".dot-container p:nth-child(6)").addClass("green"); //dot 3
+      $(".dot-container p:nth-child(8)").removeClass("green"); //dot 4
     },
     {
       offset: "100px;",
@@ -156,8 +171,10 @@ $(document).ready(function () {
   // 'Order on Dilveroo'. Moves the circle to the 4th dot when scrolling upwards from the 'section--ethics' section.
   $(".section--order a").waypoint(
     function () {
-      $(".dot-container div:nth-child(4)").addClass("display-circle");
-      $(".dot-container div:nth-child(5)").removeClass("display-circle");
+      $(".dot-container div:nth-child(7)").css({ opacity: "1" });
+      $(".dot-container div:nth-child(9)").css({ opacity: "0" });
+      $(".dot-container p:nth-child(8)").addClass("green"); //dot 4
+      $(".dot-container p:nth-child(10)").removeClass("green"); //dot 5
     },
     {
       offset: "200px;",
@@ -167,48 +184,87 @@ $(document).ready(function () {
   // 'Meet Our Charity Partners'. Moves the circle to the 5th dot when scrolling upwards from the 'section--ethics' section.
   $(".section--ethics a").waypoint(
     function () {
-      $(".dot-container div:nth-child(5)").addClass("display-circle");
-      $(".dot-container div:nth-child(6)").removeClass("display-circle");
+      $(".dot-container div:nth-child(9)").css({ opacity: "1" });
+      $(".dot-container div:nth-child(11)").css({ opacity: "0" });
+      $(".dot-container p:nth-child(10)").addClass("green"); //dot 5
+      $(".dot-container p:nth-child(12)").removeClass("green"); //dot 6
     },
     {
       offset: "100px;",
     }
   );
 
-  // 'Meet Our Charity Partners'. Moves the circle to the 5th dot when scrolling upwards from the 'section--ethics' section.
+  // 'Apply Here'. Moves the circle to the 6th dot when scrolling upwards from the 'section--contact-us' section.
   $(".section--vacancies a").waypoint(
     function () {
-      $(".dot-container div:nth-child(6)").addClass("display-circle");
-      $(".dot-container div:nth-child(7)").removeClass("display-circle");
+      $(".dot-container div:nth-child(11)").css({ opacity: "1" });
+      $(".dot-container div:nth-child(13)").css({ opacity: "0" });
+      $(".dot-container p:nth-child(12)").addClass("green"); //dot 6
+      $(".dot-container p:nth-child(14)").removeClass("green"); //dot 7
     },
     {
-      offset: "100px;",
+      offset: "170px;",
+    }
+  );
+
+  $(".section--contact-us a").waypoint(
+    function () {
+      $(".dot-container div:nth-child(13)").css({ opacity: "1" });
+      $(".dot-container p:nth-child(14)").addClass("green"); //dot 7
+    },
+    {
+      offset: "200px;",
     }
   );
   ///////////////////////////////////////////////////////////////////////////////////////
-
-  // });
-  // $(window).scroll(function () {
-  //   if ($(this).scrollTop() > 607 && $(this).scrollTop() < 1422) {
-  //     $(".dot-container div:nth-child(2)").addClass("display-circle");
-  //   } else {
-  //     $(".dot-container div:nth-child(2)").removeClass("display-circle");
-  //   }
-  // });
-
-  //   const dot1 = document.querySelector(".dot-container div:nth-child(1)");
-  // window.onscroll = function () {
-  // let scrolled = window.scrollY; //window.scrollY reads the current scroll position in px.
-  // console.log(`Scrolled: \n` + scrolled);
-  // if (scrolled >= 728 && scrolled < 1396) {
-  //   $(dot1).addClass("display-circle");
-  // } else {
-  //   $(dot1).removeClass("display-circle");
-  // };
 });
 
-// let scrolled = window.scrollY; //window.scrollY reads the current scroll position in px.
-// console.log(`Scrolled: \n` + scrolled);
-// if (scrolled > 411 && scrolled < 603) {
-//   //Do something
-// }
+let sliderImages = document.querySelectorAll(".slide"),
+  arrowRight = document.querySelector("#arrow-right"),
+  arrowLeft = document.querySelector("#arrow-left"),
+  current = 0;
+
+// //Clear all images
+function reset() {
+  for (i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].style.display = "none";
+  }
+}
+
+// //slider init
+function startSlide() {
+  reset();
+  sliderImages[0].style.display = "block";
+}
+
+// //show previous
+function slideLeft() {
+  reset();
+  sliderImages[current - 1].style.display = "block";
+  current--;
+}
+
+// //show next
+function slideRight() {
+  reset();
+  sliderImages[current + 1].style.display = "block";
+  current++;
+}
+
+// //Left arrow click
+arrowLeft.addEventListener("click", function () {
+  if (current === 0) {
+    current = sliderImages.length;
+  }
+  slideLeft();
+});
+
+// //Right arrow click
+arrowRight.addEventListener("click", function () {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+});
+
+startSlide();
