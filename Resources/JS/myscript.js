@@ -219,12 +219,13 @@ $(document).ready(function () {
   ///////////////////////////////////////////////////////////////////////////////////////
 });
 
+//Code to change Hero picture when clicking on the image. The code for this was found on https://www.youtube.com/watch?v=7ZO2RTMNSAY
 let sliderImages = document.querySelectorAll(".slide"),
   arrowRight = document.querySelector("#arrow-right"),
   arrowLeft = document.querySelector("#arrow-left"),
   current = 0;
 
-// //Clear all images
+//Clear all images
 function reset() {
   for (i = 0; i < sliderImages.length; i++) {
     sliderImages[i].style.display = "none";
@@ -244,14 +245,14 @@ function slideLeft() {
   current--;
 }
 
-// //show next
+//show next
 function slideRight() {
   reset();
   sliderImages[current + 1].style.display = "block";
   current++;
 }
 
-// //Left arrow click
+//Left arrow click
 arrowLeft.addEventListener("click", function () {
   if (current === 0) {
     current = sliderImages.length;
@@ -259,7 +260,7 @@ arrowLeft.addEventListener("click", function () {
   slideLeft();
 });
 
-// //Right arrow click
+//Right arrow click
 arrowRight.addEventListener("click", function () {
   if (current === sliderImages.length - 1) {
     current = -1;
@@ -268,3 +269,57 @@ arrowRight.addEventListener("click", function () {
 });
 
 startSlide();
+///////////////////////////////////////////////////////////////////////////////////////
+
+//Code to change colour of arrow on Hero images when hovered over.
+$(document).ready(function () {
+  $("#arrow-left-div").hover(
+    function () {
+      $(this).css("border-color", "#66b245"); //Note: I tried using the 'toggleClass' function but for some reason it was not working.
+      $("#arrow-left").css("background-color", "#66b245");
+    },
+    function () {
+      $(this).css("border-color", "#fff");
+      $("#arrow-left").css("background-color", "#fff");
+    }
+  );
+
+  $("#arrow-right-div").hover(
+    function () {
+      $(this).css("border-color", "#66b245");
+      $("#arrow-right").css("background-color", "#66b245");
+    },
+    function () {
+      $(this).css("border-color", "#fff");
+      $("#arrow-right").css("background-color", "#fff");
+    }
+  );
+
+  $("#arrow-right-div").click(function () {
+    // $(".hero-img-2").css("opacity", "0");
+  });
+
+  $(function () {
+    $("#slider div:gt(0)").hide();
+    setInterval(function () {
+      $("#slider :first-child")
+        .fadeOut()
+        .next("div")
+        .fadeIn()
+        .end()
+        .appendTo("#slider");
+    }, 3000);
+  });
+});
+
+// $(function(){
+//   $('.fadein img:gt(0)').hide();
+//   setInterval(function(){
+//     $('.fadein :first-child')
+//     .fadeOut()
+//     .next('img')
+//     .fadeIn()
+//     .end()
+//     .appendTo('.fadein');},
+//     3000);
+// });
