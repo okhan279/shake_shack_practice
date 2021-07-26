@@ -1,0 +1,581 @@
+@media only screen and (min-width: 415px) {
+  .show-415 {
+    display: block;
+  }
+
+  /* The container for the white dots */
+  .dot-container {
+    width: 45px;
+    height: 365px;
+    left: 4%;
+    background-color: rgba(22, 22, 22, 0.5);
+    position: fixed;
+    top: 150px;
+    border-radius: 100px;
+    padding: 25px 0;
+    z-index: 99;
+  }
+
+  .dot-container div {
+    border: 2px solid white;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  .dot-container div:nth-child(1) {
+    opacity: 1;
+  }
+
+  .dot-container p {
+    margin-top: -30px;
+    font-size: 50px;
+  }
+
+  .dot-container p:nth-child(2) {
+    color: #66b245;
+  }
+
+  .green {
+    color: #66b245;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  /*----- 'Our Story' SECTION -----*/
+  .section--story {
+    padding: 90px 75px;
+  }
+
+  /*----- 'ShackBurger DIY Kits' SECTION -----*/
+  .shackburger-kit {
+    padding: 90px 75px 90px 75px;
+  }
+
+  /*----- 'Order' SECTION -----*/
+  .pick-up-padding,
+  .delivered-padding {
+    padding: 60px 75px 90px 75px;
+  }
+
+  /*----- 'Ethics' SECTION -----*/
+  .ethics-padding {
+    padding: 90px 75px;
+  }
+
+  /*----- 'Vacancies' SECTION -----*/
+  .vacancies-padding {
+    padding: 60px 60px 70px 60px;
+  }
+
+  /*----- 'Contact-us' SECTION -----*/
+  .contact-us-padding {
+    padding: 60px 65px 70px 65px;
+  }
+
+  /*----- 'Mailing list' SECTION -----*/
+  .section--mailing-list {
+    padding: 60px 65px 15px 65px;
+  }
+
+  form {
+    padding: 0 60px;
+  }
+
+  .select-wrapper::after {
+    right: 35px;
+  }
+
+  /*----- FOOTER -----*/
+  footer {
+    padding: 0 105px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .form-group {
+    display: inline-block;
+    width: 47%;
+    margin-bottom: 10px;
+  }
+
+  /* Styles the 'First name' <input> box */
+  .form-group1 {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .shackburger-img-1 {
+    display: none;
+  }
+
+  /* Hides uncropped images */
+  .hide-uncropped {
+    display: none;
+  }
+
+  /* Displays the navigation menu  */
+  .header-nav {
+    display: block;
+  }
+
+  /* Shows cropped images */
+  .show-cropped {
+    display: block;
+    width: 100%;
+  }
+
+  /*----- MENU AT THE TOP -----*/
+  .order-link,
+  .ham-border .logo,
+  .container-1 {
+    display: none;
+  }
+
+  .header-nav {
+    width: 100%;
+    height: 100px;
+    background-color: #f1f2ed;
+    position: relative;
+    text-align: center;
+    background-image: url("/Images/logo-shake-shack.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* This container keeps the 6 nav items from moving completely out wide in the nav menu. It can
+        also be used to float the elements if needed.  */
+  .nav-border {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header-nav ul {
+    background-color: inherit;
+    padding-bottom: 0;
+    display: inline-block;
+    margin-top: 35px;
+  }
+
+  .header-nav ul li {
+    display: inline-block;
+    line-height: 12px;
+  }
+
+  /* Container for 'Menu', 'Locations', 'Order Online'  */
+  .header-nav ul:first-child {
+    position: relative;
+    left: 55px;
+    top: 0px;
+    background-color: transparent;
+    width: 38%;
+    float: left;
+  }
+
+  .header-nav ul:first-child li {
+    height: 28px;
+    margin-left: 5%;
+    float: left;
+  }
+
+  /* Container for 'Blog', 'Stand for Something Good', 'Contact Us'  */
+  .header-nav ul:last-child {
+    position: relative;
+    left: 105px;
+    top: -15px;
+    background-color: transparent;
+  }
+
+  .header-nav ul:last-child li {
+    margin-right: 10px;
+    /* outline: 1px solid red; */
+  }
+
+  .nav-order {
+    width: 60%;
+  }
+
+  .nav-good {
+    width: 100px;
+    position: relative;
+    top: 10px;
+  }
+
+  .nav-contact {
+    width: 99%;
+  }
+
+  .header-nav ul li a {
+    text-transform: uppercase;
+  }
+
+  /*----- 'Our Story' SECTION -----*/
+  .section--story {
+    padding-bottom: 130px;
+  }
+
+  /*----- 'Mailing list' SECTION -----*/
+  .section--mailing-list {
+    padding: 60px 95px 15px 95px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .hide-cropped {
+    display: none;
+  }
+
+  .shackburger-img-1 {
+    display: none;
+  }
+
+  .happy-workers-pic {
+    display: block;
+  }
+
+  .heading {
+    line-height: 40px;
+  }
+
+  /*----- 'Our Story' SECTION -----*/
+  .section--story {
+    padding: 140px 200px;
+  }
+
+  .story-p1,
+  .story-p2 {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*----- 'ShackBurger DIY Kits' SECTION -----*/
+  .section--kit {
+    margin-top: 0px;
+  }
+
+  .shackburger-kit {
+    width: 50%;
+    float: right;
+    margin-top: -50px;
+  }
+
+  .background-image-kit {
+    width: 50%;
+    height: 936.2px;
+    float: left;
+    background-image: url("/Images/Shackburger-kit-burger.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /*----- 'Order' SECTION -----*/
+  .section--order {
+    clear: both;
+    /* border: 1px solid red; */
+    height: 900px; /* I have set this height so that the JS code for the waypoint can read this section */
+  }
+
+  /* 'Order for pick up' box */
+  .pick-up {
+    width: 50%;
+    float: left;
+  }
+
+  /* 'Get your fix delivered' box */
+  .delivered {
+    width: 50%;
+    float: right;
+  }
+
+  /* 'Order for pick up' box */
+  .pick-up-container {
+    height: 900px;
+  }
+
+  .pick-up-padding {
+    padding-top: 90px;
+  }
+
+  /*----- 'Ethics' SECTION -----*/
+  .section--ethics {
+    height: 100vh; /* I have set this height so that the JS code for the waypoint can read this section */
+  }
+
+  .ethics-pic {
+    display: none;
+  }
+
+  .ethics-text-container {
+    width: 50%;
+    height: 100vh;
+    float: left;
+  }
+
+  .background-image-ethics {
+    width: 50%;
+    height: 100vh;
+    float: right;
+    clear: both;
+    background-image: url("/Images/shake-shack-ethics-pic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /*----- 'Vacancies' SECTION -----*/
+  .section--vacancies {
+    height: 100vh; /* I have set this height so that the JS code for the waypoint can read this section */
+  }
+
+  .happy-workers-pic {
+    display: none;
+  }
+
+  .background-image-vacancies {
+    width: 50%;
+    height: 100vh;
+    float: left;
+    clear: both;
+    background-image: url("/Images/happy-workers-pic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .vacancies-float {
+    width: 50%;
+    height: 100vh;
+    float: right;
+    padding-top: 140px;
+  }
+
+  .vacancies-psuedo::before {
+    background-position: bottom left -230px;
+  }
+
+  /*----- 'Contact-us' SECTION -----*/
+  .lets-talk-pic {
+    display: none;
+  }
+
+  .lets-talk-text {
+    width: 50%;
+    height: 100vh;
+    float: left;
+  }
+
+  .background-image-contact {
+    width: 50%;
+    height: 100vh;
+    float: right;
+    background-image: url("/Images/lets-talk-pic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .section--mailing-list {
+    clear: both;
+  }
+
+  /*----- 'Mailing list' SECTION -----*/
+  .section--mailing-list {
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+
+  .section--mailing-list p {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .mailing-list-p {
+    max-width: 616px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* input box for 'First Name' and 'Last Name' */
+  .form-group {
+    max-width: 190px;
+  }
+
+  .privacy-policy {
+    max-width: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  hr {
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 'Day' dropdown box */
+  select:first-child {
+    margin-right: 12px;
+  }
+
+  /* input box for 'Day' and 'Month' */
+  select {
+    width: 186px;
+  }
+
+  /* Input box for 'E-mail' */
+  form > div > input {
+    width: 396px;
+  }
+
+  .form-group1 {
+    margin-right: 10px;
+  }
+
+  input {
+    position: relative;
+  }
+
+  /*----- FOOTER -----*/
+  footer {
+    padding-left: 260px;
+    padding-right: 260px;
+  }
+
+  .footer-legal {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1120px) {
+  .show-1120 {
+    display: block;
+  }
+  /*----- ARROW FOR HERO PICTURE -----*/
+  .arrow-left-div {
+    border: 3px solid white;
+    height: 60px;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    width: 60px;
+    border-radius: 100px;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  #arrow-left {
+    background-color: #fff;
+    height: 4px;
+    width: 35px;
+    position: absolute;
+    top: 44%;
+    left: 17%;
+    cursor: pointer;
+  }
+
+  #arrow-left::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 1px;
+    border-radius: inherit;
+    transform: rotate(45deg);
+    width: 17px;
+    height: inherit;
+    background-color: inherit;
+  }
+
+  .arrow-border-green {
+    border-color: #66b245;
+  }
+
+  .arrow-green {
+    background-color: #66b245;
+  }
+
+  #arrow-left::after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    right: 17px;
+    border-radius: inherit;
+    transform: rotate(-45deg);
+    width: 20px;
+    height: inherit;
+    background-color: inherit;
+  }
+
+  .arrow-right-div {
+    border: 3px solid white;
+    height: 60px;
+    position: absolute;
+    top: 35%;
+    right: 10%;
+    width: 60px;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+
+  #arrow-right {
+    background-color: #fff;
+    height: 4px;
+    width: 35px;
+    position: absolute;
+    top: 44%;
+    right: 17%;
+    cursor: pointer;
+  }
+
+  #arrow-right::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 1px;
+    border-radius: inherit;
+    transform: rotate(-45deg);
+    width: 17px;
+    height: inherit;
+    background-color: inherit;
+  }
+
+  #arrow-right::after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 17px;
+    border-radius: inherit;
+    transform: rotate(45deg);
+    width: 20px;
+    height: inherit;
+    background-color: inherit;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  /* HTML elements that have this class, will not display that particular element. */
+  /* .hide-1280 {
+      display: none;
+    }
+  
+    .show-1280 {
+      display: block;
+    } */
+
+  /* .header-pic-1280 {
+      width: 100%;
+      height: 100%;
+    } */
+}

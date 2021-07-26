@@ -1,50 +1,12 @@
-///////
-///////
+//Animation for the white dots and cricles to transition depending on which part of the page.
+//Starts at 415px.
 
 $(document).ready(function () {
-  $(".ham-border").click(function () {
-    /* Toggles the 'transtion' class for the three hamburger lines */
-    $(".hamburger span:nth-child(1)").toggleClass("transition");
-    $(".hamburger span:nth-child(2)").toggleClass("transition");
-    $(".hamburger span:nth-child(3)").toggleClass("transition");
-    $(".cross span:nth-child(1)").toggleClass("transition");
-    $(".cross span:nth-child(2)").toggleClass("transition");
-
-    /* Toggles 'hide-class' for the 'header-nav' container */
-    $(".header-nav").toggleClass("hide-class");
-  });
-
-  /* Adds the sticky class to the 'container-1' element */
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 84) {
-      $(".container-1").addClass("sticky");
-      $("#header_placeholder").css({ display: "block" });
-    } else {
-      $(".container-1").removeClass("sticky");
-      $("#header_placeholder").css({ display: "none" });
-    }
-  });
-
-  /* Adds the sticky class to the 'header-nav' element. */
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 84) {
-      $(".header-nav").addClass("sticky-menu");
-      $("#header_placeholder").css({ display: "block" });
-    } else {
-      $(".header-nav").removeClass("sticky-menu");
-      $("#header_placeholder").css({ display: "none" });
-    }
-  });
-  // });
-
-  /* Makes the white circle visible depending on the section of the page the user is on */
-
-  //dot 1
   $(".js--header-pic").waypoint(function () {
     $(".dot-container div:nth-child(1)").css({ border: "2px solid white" });
     $(".dot-container div:nth-child(3)").css({ opacity: "0" });
-    $(".dot-container p:nth-child(2)").css({ color: "#66b245" }); //adds green colour to dot 1
-    $(".dot-container p:nth-child(4)").removeClass("green");
+    $(".dot-container p:nth-child(2)").css({ color: "#66b245" }); //dot 1
+    $(".dot-container p:nth-child(4)").removeClass("green"); // dot 2
   });
 
   //dot 2
@@ -143,6 +105,19 @@ $(document).ready(function () {
 
   //--------------- SCROLLING UPWARDS --------------- //
   //The green cart in the 'section--story' section. Moves the circle to the 1st dot when scrolling upwards from the 'section--kit' section.
+  $(".dot1-waypoint").waypoint(
+    function () {
+      $(".dot-container div:nth-child(1)").css({ opacity: "1" });
+      // $(".dot-container p:nth-child(2)").addClass("green"); //adds '.green' to dot 6
+      $(".dot-container p:nth-child(2)").css({ color: "#66b245" }); //dot 1
+      $(".dot-container div:nth-child(3)").css({ opacity: "0" });
+      $(".dot-container p:nth-child(4)").removeClass("green"); //removes '.green' to dot 2
+    },
+    {
+      offset: "100px;",
+    }
+  );
+
   $(".home-cart").waypoint(
     function () {
       $(".dot-container div:nth-child(3)").css({ opacity: "1" });
@@ -216,110 +191,4 @@ $(document).ready(function () {
       offset: "200px;",
     }
   );
-  ///////////////////////////////////////////////////////////////////////////////////////
 });
-
-//Code to change Hero picture when clicking on the image. The code for this was found on https://www.youtube.com/watch?v=7ZO2RTMNSAY
-let sliderImages = document.querySelectorAll(".slide"),
-  arrowRight = document.querySelector("#arrow-right"),
-  arrowLeft = document.querySelector("#arrow-left"),
-  current = 0;
-
-//Clear all images
-function reset() {
-  for (i = 0; i < sliderImages.length; i++) {
-    sliderImages[i].style.display = "none";
-  }
-}
-
-// //slider init
-function startSlide() {
-  reset();
-  sliderImages[0].style.display = "block";
-}
-
-// //show previous
-function slideLeft() {
-  reset();
-  sliderImages[current - 1].style.display = "block";
-  current--;
-}
-
-//show next
-function slideRight() {
-  reset();
-  sliderImages[current + 1].style.display = "block";
-  current++;
-}
-
-//Left arrow click
-arrowLeft.addEventListener("click", function () {
-  if (current === 0) {
-    current = sliderImages.length;
-  }
-  slideLeft();
-});
-
-//Right arrow click
-arrowRight.addEventListener("click", function () {
-  if (current === sliderImages.length - 1) {
-    current = -1;
-  }
-  slideRight();
-});
-
-startSlide();
-///////////////////////////////////////////////////////////////////////////////////////
-
-//Code to change colour of arrow on Hero images when hovered over.
-$(document).ready(function () {
-  $("#arrow-left-div").hover(
-    function () {
-      $(this).css("border-color", "#66b245"); //Note: I tried using the 'toggleClass' function but for some reason it was not working.
-      $("#arrow-left").css("background-color", "#66b245");
-    },
-    function () {
-      $(this).css("border-color", "#fff");
-      $("#arrow-left").css("background-color", "#fff");
-    }
-  );
-
-  $("#arrow-right-div").hover(
-    function () {
-      $(this).css("border-color", "#66b245");
-      $("#arrow-right").css("background-color", "#66b245");
-    },
-    function () {
-      $(this).css("border-color", "#fff");
-      $("#arrow-right").css("background-color", "#fff");
-    }
-  );
-
-  $("#arrow-right-div").click(function () {
-    // $(".hero-img-2").css("opacity", "0");
-  });
-
-  $(function () {
-    $("#slider div:gt(0)").hide();
-    setInterval(function () {
-      $("#slider :first-child")
-        .fadeOut()
-        .next("div")
-        .fadeIn()
-        .end()
-        .appendTo("#slider");
-    }, 3000);
-  });
-});
-
-// $(function(){
-//   $('.fadein img:gt(0)').hide();
-//   setInterval(function(){
-//     $('.fadein :first-child')
-//     .fadeOut()
-//     .next('img')
-//     .fadeIn()
-//     .end()
-//     .appendTo('.fadein');},
-//     3000);
-// });
