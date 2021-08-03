@@ -11,5 +11,5 @@ $(function () {
       .fadeIn()
       .end()
       .appendTo("#slider");
-  }, 3000);
+  }, 5000);
 });

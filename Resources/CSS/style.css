@@ -268,9 +268,10 @@ span {
   width: 100%;
 }
 
+/* Added to the nav (from 'myScript2') from 800px and beyond.  */
 .sticky-menu {
   position: fixed;
-  top: 80px;
+  top: 0;
   width: 100%;
 }
 
@@ -308,6 +309,28 @@ span {
 /* -------------------------------------------- */
 
 /* -------------------------------------------- */
+/* 'Back to the Shack' SECTION */
+/* -------------------------------------------- */
+.padding-backToTheShack {
+  padding: 20px 15px 20px 15px;
+}
+
+.burger-restaurant {
+  width: 100%;
+}
+
+.backToTheShack-wrap h3 {
+  line-height: 40px;
+}
+
+.backToTheShack-wrap a:nth-child(5) {
+  margin-top: 30px;
+}
+/* -------------------------------------------- */
+/* END 'Back to the Shack' SECTION */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
 /* 'ShackBurger DIY Kits' SECTION */
 /* -------------------------------------------- */
 .shackburger-kit {
@@ -338,7 +361,7 @@ span {
   margin: 0px;
 }
 
-.link {
+/* .link {
   text-decoration: none;
   color: #66b245;
   background-color: #fff;
@@ -350,7 +373,7 @@ span {
   display: block;
   text-align: center;
   margin-top: 40px;
-}
+} */
 /* -------------------------------------------- */
 /* END 'ShackBurger Kits' SECTION */
 /* -------------------------------------------- */

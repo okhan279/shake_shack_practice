@@ -35,6 +35,7 @@
         <a class="order-link" href="#">Order Online</a>
       </div>
 
+      <!-- Used to stop the nav from jumping by positioning a placeholder when the nav becomes sticky -->
       <div id="header_placeholder"></div>
 
       <nav class="header-nav hide-class">
@@ -83,44 +84,19 @@
         <span id="arrow-left"></span>
       </div>
 
-      <!-- Container for the 2 images -->
-      <!-- <div class="wrap"> -->
       <div id="slider">
-        <!-- <div class="slide slide1"> -->
         <div class="slide slide1 slide-content"></div>
-        <!-- </div> -->
-        <!-- <div class="slide slide2"> -->
         <div class="slide slide2 slide-content"></div>
-        <!-- </div> -->
       </div>
-      <!-- </div> -->
 
-      <div class="dot1-waypoint"></div>
+      <!-- Used within 'myScript3' for when scrolling upwards -->
+      <div class="dot1-waypoint" style="visibility: hidden"></div>
+
+      <!-- TO DO NEXT: Add the 3 new sections in the main page -->
 
       <div class="arrow-right-div hide-class show-1120" id="arrow-right-div">
         <span id="arrow-right"></span>
       </div>
-
-      <!-- <div class="arrow-left-div" id="arrow-left-div">
-        <span id="arrow-left"></span>
-      </div>
-
-      <div class="fadein">
-        <img
-          class="hero-img-1"
-          src="/Images/header-pic.jpg"
-          alt="Shake Shack Hero Image 1"
-        />
-        <img
-          class="hero-img-2"
-          src="/Images/SS_Hero_Burger_V1-2.jpeg"
-          alt="Shake Shack Hero Image 2"
-        />
-      </div> -->
-
-      <!-- <div class="arrow-right-div" id="arrow-right-div">
-        <span id="arrow-right"></span>
-      </div> -->
 
       <section class="section--story">
         <h3 class="heading our-story">Our Story</h3>
@@ -150,6 +126,37 @@
         />
       </section>
 
+      <section class="section--backToTheShack">
+        <img class="burger-restaurant hide-uncropped show-uncropped" 
+             src="Images/Burger-restaurant-quality.jpeg" 
+             alt="Shake Shack Burgers">
+        
+        <img class="cropped-burger-restaurant hide-cropped show-cropped"
+             src="/Images/Cropped_Images/Burger-restaurant-quality-cropped.jpeg"
+             alt="Shack burger cropped image">
+
+        <!-- This div is to hold the background image for 960px  -->
+        <div class="background-image-backToTheShack"></div>
+        <!-- ///////////// -->
+
+        <div class="padding-backToTheShack backToTheShack-wrap">
+          <img class="section-icon" 
+               src="/Images/food-and-drink-burger.png" 
+               alt="Hamburger picture">
+
+          <h3 class="heading">Back to the Shack. We're Open!</h3>
+          <p>We’re excited to welcome you back to our Shacks for indoor dining! 
+          We’ve been busy adapting our Shacks to ensure the safety of our guests 
+          and team members.</p>
+
+          <p>Stay up to date via our dedicated COVID-19 page + come meat us at your 
+          local Shack, we’ll be grilled to see you!</p>
+
+          <a href="#" class="link">Find Your Shack</a>
+          <a href="#" class="link tester">More Covid-19 Info</a>
+        </div>
+      </section>
+
       <section class="section--kit">
         <img
           class="shackburger-img-1 hide-uncropped show-uncropped"
@@ -160,13 +167,14 @@
         <!-- Cropped image -->
         <img
           class="cropped-shackburger-img-1 hide-cropped show-cropped"
-          src="/Images/Shackburger-kit-burger-cropped.png"
+          src="/Images/Cropped_Images/Shackburger-kit-burger-cropped.png"
           alt="Shack Burger Kit Cropped"
         />
 
         <!-- This div is to hold the background image for 960px  -->
         <div class="background-image-kit"></div>
         <!-- ///////////// -->
+
         <div class="shackburger-kit">
           <img
             class="section-icon"
@@ -321,7 +329,7 @@
         <!-- Cropped image -->
         <img
           class="cropped-happy-workers-pic hide-cropped show-cropped"
-          src="Images/happy-workers-pic-cropped.jpg"
+          src="Images/Cropped_Images/happy-workers-pic-cropped.jpg"
           alt="Shake Shack Happy Workers Cropped"
         />
         <!-- ///////////// -->
@@ -494,6 +502,7 @@
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <!-- CDN for the jQuery API -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Script for waypoints -->
     <script src="Resources/JS/jquery.waypoints.min.js"></script>
     <!-- Animation for hamburger icon -->
     <script src="Resources/JS/myScript1.js"></script>
